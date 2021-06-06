@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://vcnone.github.io/about/index.html</loc>
+    <loc>https://vcnone.github.io/关于我/index.html</loc>
     
     <lastmod>2021-05-18</lastmod>
     
@@ -23,7 +23,7 @@
   </url>
   
   <url>
-    <loc>https://vcnone.github.io/schedule/index.html</loc>
+    <loc>https://vcnone.github.io/日程/index.html</loc>
     
     <lastmod>2021-05-01</lastmod>
     
@@ -51,14 +51,14 @@
   </url>
   
   <url>
-    <loc>https://vcnone.github.io/categories/index.html</loc>
+    <loc>https://vcnone.github.io/分类/index.html</loc>
     
     <lastmod>2021-05-01</lastmod>
     
   </url>
   
   <url>
-    <loc>https://vcnone.github.io/tags/index.html</loc>
+    <loc>https://vcnone.github.io/标签/index.html</loc>
     
     <lastmod>2021-05-01</lastmod>
     
@@ -74,14 +74,14 @@
 
   
   <url>
-    <loc>https://me.vcnone.top/tags/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://me.vcnone.top/%E6%A0%87%E7%AD%BE/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2021-06-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://me.vcnone.top/tags/%E6%89%80%E6%80%9D%E6%89%80%E6%84%9F/</loc>
+    <loc>https://me.vcnone.top/%E6%A0%87%E7%AD%BE/%E6%89%80%E6%80%9D%E6%89%80%E6%84%9F/</loc>
     <lastmod>2021-06-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -90,28 +90,28 @@
 
   
   <url>
-    <loc>https://me.vcnone.top/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://me.vcnone.top/%E5%88%86%E7%B1%BB/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2021-06-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://me.vcnone.top/categories/%E7%94%9F%E6%B4%BB/</loc>
+    <loc>https://me.vcnone.top/%E5%88%86%E7%B1%BB/%E7%94%9F%E6%B4%BB/</loc>
     <lastmod>2021-06-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://me.vcnone.top/categories/%E6%8A%80%E6%9C%AF/%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2/</loc>
+    <loc>https://me.vcnone.top/%E5%88%86%E7%B1%BB/%E6%8A%80%E6%9C%AF/%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2/</loc>
     <lastmod>2021-06-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://me.vcnone.top/categories/%E7%94%9F%E6%B4%BB/%E7%88%B1%E6%83%85/</loc>
+    <loc>https://me.vcnone.top/%E5%88%86%E7%B1%BB/%E7%94%9F%E6%B4%BB/%E7%88%B1%E6%83%85/</loc>
     <lastmod>2021-06-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
