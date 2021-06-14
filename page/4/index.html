@@ -85,7 +85,7 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-archives"><a href="/%E5%BD%92%E6%A1%A3/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">4</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/%E5%BD%92%E6%A1%A3/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">5</span></a></li>
   </ul>
 </nav>
 
@@ -131,7 +131,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/%E5%BD%92%E6%A1%A3/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -201,7 +201,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://vcnone.top/2021/05/01/%E6%88%91%E6%89%80%E7%88%B1%E7%9D%80%E7%9A%84/">
+    <link itemprop="mainEntityOfPage" href="https://vcnone.top/2021/05/01/Supervisor/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -214,7 +214,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/05/01/%E6%88%91%E6%89%80%E7%88%B1%E7%9D%80%E7%9A%84/" class="post-title-link" itemprop="url">我所爱着的</a>
+          <a href="/2021/05/01/Supervisor/" class="post-title-link" itemprop="url">Supervisor</a>
         </h2>
 
         <div class="post-meta-container">
@@ -224,10 +224,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-05-01 00:26:47 / 修改时间：20:28:22" itemprop="dateCreated datePublished" datetime="2021-05-01T00:26:47+08:00">2021-05-01</time>
+      <time title="创建时间：2021-05-01 17:53:16" itemprop="dateCreated datePublished" datetime="2021-05-01T17:53:16+08:00">2021-05-01</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-05-11 23:18:14" itemprop="dateModified" datetime="2021-05-11T23:18:14+08:00">2021-05-11</time>
+      </span>
 
   
 </div>
@@ -239,10 +245,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>我所爱者，无非花草树木</p>
-<div align='center' ><font size='70'>看得见的美好</font></div>
+          <h1 id="用pip装supervisor"><a href="#用pip装supervisor" class="headerlink" title="用pip装supervisor"></a>用pip装supervisor</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;bootstrap.pypa.io&#x2F;get-pip.py</span><br><span class="line">python get-pip.py</span><br><span class="line">rm -rf get-pip.py</span><br><span class="line">pip install supervisor</span><br></pre></td></tr></table></figure>
 
-<p>她的笑便是我的美好</p>
+<h1 id="配置supervisor"><a href="#配置supervisor" class="headerlink" title="配置supervisor"></a>配置supervisor</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">echo_supervisord_conf &gt; &#x2F;etc&#x2F;supervisor&#x2F;supervisord.conf(配置文件位置)</span><br><span class="line">echo &quot;supervisord&quot; &gt;&gt; &#x2F;etc&#x2F;rc.local</span><br><span class="line">cat &gt;&gt;&#x2F;etc&#x2F;supervisord.conf&lt;&lt;&#39;EOF&#39;</span><br><span class="line"></span><br><span class="line">[program:relaysrv]</span><br><span class="line">command&#x3D;relaysrv -keys &#x2F;etc&#x2F;relaysrv -pools&#x3D;&quot;&quot;</span><br><span class="line">autostart&#x3D;true</span><br><span class="line">autorestart&#x3D;true</span><br><span class="line">startsecs&#x3D;10</span><br><span class="line">stdout_logfile&#x3D;&#x2F;var&#x2F;log&#x2F;relaysrv.log</span><br><span class="line">stdout_logfile_maxbytes&#x3D;1MB</span><br><span class="line">stdout_logfile_backups&#x3D;10</span><br><span class="line">stdout_capture_maxbytes&#x3D;1MB</span><br><span class="line">redirect_stderr&#x3D;true</span><br><span class="line">user &#x3D; root</span><br><span class="line"></span><br><span class="line">#program后面跟服务的名称</span><br><span class="line">#command是程序的执行路径</span><br><span class="line">#autorstart是表示应用程序随supervisor的启动而启动</span><br><span class="line">#stdout_logfile是捕获标准输出。</span><br><span class="line"></span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+
+<h1 id="开机启动Supervisor服务"><a href="#开机启动Supervisor服务" class="headerlink" title="开机启动Supervisor服务"></a>开机启动Supervisor服务</h1><h2 id="配置systemctl服务方法"><a href="#配置systemctl服务方法" class="headerlink" title="配置systemctl服务方法"></a>配置systemctl服务方法</h2><p>进入<code>/lib/systemd/system</code>目录，并创建<code>supervisor.service</code>文件，该文件内容如下所示。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">root@VC:&#x2F;lib&#x2F;systemd&#x2F;system#whereis supervisord</span><br><span class="line">supervisord: *查到的地址*&#x2F;supervisord</span><br><span class="line">root@VC:&#x2F;lib&#x2F;systemd&#x2F;system# whereis supervisorctl</span><br><span class="line">supervisorctl: *查到的地址*&#x2F;supervisorctl</span><br><span class="line"># 创建文件</span><br><span class="line">root@VC:&#x2F;lib&#x2F;systemd&#x2F;system# vim supervisor.service</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[Unit]</span><br><span class="line">Description&#x3D;supervisor</span><br><span class="line">After&#x3D;network.target</span><br><span class="line"> </span><br><span class="line">[Service]</span><br><span class="line">Type&#x3D;forking</span><br><span class="line">ExecStart&#x3D;*查到的地址*&#x2F;supervisord -c *配置文件位置*&#x2F;supervisord.conf</span><br><span class="line">ExecStop&#x3D;*查到的地址*&#x2F;supervisorctl $OPTIONS shutdown</span><br><span class="line">ExecReload&#x3D;*查到的地址*&#x2F;supervisorctl $OPTIONS reload</span><br><span class="line">KillMode&#x3D;process</span><br><span class="line">Restart&#x3D;on-failure</span><br><span class="line">RestartSec&#x3D;42s</span><br><span class="line"> </span><br><span class="line">[Install]</span><br><span class="line">WantedBy&#x3D;multi-user.target</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@VC:/lib/systemd/system<span class="comment"># systemctl enable supervisor.service</span></span><br><span class="line">Created symlink from /etc/systemd/system/multi-user.target.wants/supervisor.service to /lib/systemd/system/supervisor.service.</span><br><span class="line">root@VC:/lib/systemd/system<span class="comment"># systemctl daemon-reload</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="修改文件权限为766"><a href="#修改文件权限为766" class="headerlink" title="修改文件权限为766"></a>修改文件权限为766</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@VC:&#x2F;lib&#x2F;systemd&#x2F;system# chmod 766 supervisor.service</span><br></pre></td></tr></table></figure>
+
+<h2 id="supervisorctl命令行下的命令："><a href="#supervisorctl命令行下的命令：" class="headerlink" title="supervisorctl命令行下的命令："></a>supervisorctl命令行下的命令：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">supervisorctl status  #查看supervisord监控的所有进程的状态</span><br><span class="line">supervisorctl celery status  #查看celery进程的状态</span><br><span class="line">supervisorctl stop xxx  #停止某一个进程(xxx)，xxx为[program:theprogramname]里配置的值</span><br><span class="line">supervisorctl start xxx  #启动某个进程</span><br><span class="line">supervisorctl restart xxx  #重启某个进程</span><br><span class="line">supervisorctl stop groupworker  #重启所有属于名为groupworker这个分组的进程</span><br><span class="line">supervisorctl stop all  #停止全部进程，注：start、(start,restart同理)restart、stop都不会载入最新的配置文件</span><br><span class="line">supervisorctl reload  #重启supervisor</span><br><span class="line">supervisorctl update  #根据最新的配置文件，启动新配置或有改动的进程，配置没有改动的进程不会受影响而重启。当配置文件修改后，要执行这条命令。</span><br><span class="line">#用stop停止掉的进程，即使配置文件设置了autorestart&#x3D;true，用reload或者update都不会自动重启。</span><br><span class="line">supervisorctl shutdown  # 关闭supervisord,会同时关闭supervisord监控的所有进程</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -262,7 +277,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span>
+    <a class="extend prev" rel="prev" href="/page/3/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 <script src="/js/comments.js"></script>
 </div>
