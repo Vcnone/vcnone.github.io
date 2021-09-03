@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://vcnone.github.io/home/index.html</loc>
+    
+    <lastmod>2021-09-03</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://vcnone.github.io/index.html</loc>
     
     <lastmod>2021-09-03</lastmod>
@@ -37,7 +44,7 @@
   </url>
   
   <url>
-    <loc>https://vcnone.github.io/日程/index.html</loc>
+    <loc>https://vcnone.github.io/schedule/index.html</loc>
     
     <lastmod>2021-05-01</lastmod>
     
@@ -65,14 +72,14 @@
   </url>
   
   <url>
-    <loc>https://vcnone.github.io/分类/index.html</loc>
+    <loc>https://vcnone.github.io/categories/index.html</loc>
     
     <lastmod>2021-05-01</lastmod>
     
   </url>
   
   <url>
-    <loc>https://vcnone.github.io/标签/index.html</loc>
+    <loc>https://vcnone.github.io/tags/index.html</loc>
     
     <lastmod>2021-05-01</lastmod>
     
@@ -80,7 +87,7 @@
   
 
   <url>
-    <loc>https://vcnone.top/</loc>
+    <loc>https://blog.vcnone.top/</loc>
     <lastmod>2021-09-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
@@ -88,14 +95,14 @@
 
   
   <url>
-    <loc>https://vcnone.top/tags/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>https://blog.vcnone.top/tags/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2021-09-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://vcnone.top/tags/%E6%89%80%E6%80%9D%E6%89%80%E6%84%9F/</loc>
+    <loc>https://blog.vcnone.top/tags/%E6%89%80%E6%80%9D%E6%89%80%E6%84%9F/</loc>
     <lastmod>2021-09-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
