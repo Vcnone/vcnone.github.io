@@ -2,28 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://vcnone.github.io/index.html</loc>
+    <loc>https://vcnone.github.io/2021/09/12/Debian下LNMP搭建/</loc>
     
-    <lastmod>2021-09-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://vcnone.github.io/2021/05/01/Supervisor/</loc>
-    
-    <lastmod>2021-09-11</lastmod>
+    <lastmod>2021-09-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://vcnone.github.io/2021/05/01/Syncthing/</loc>
     
-    <lastmod>2021-09-11</lastmod>
+    <lastmod>2021-09-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://vcnone.github.io/2021/06/14/GithubPage/</loc>
+    
+    <lastmod>2021-09-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://vcnone.github.io/2021/06/15/nginx反向代理GIthubPage/</loc>
+    
+    <lastmod>2021-09-12</lastmod>
     
   </url>
   
   <url>
     <loc>https://vcnone.github.io/2021/05/01/Python-pip/</loc>
+    
+    <lastmod>2021-09-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://vcnone.github.io/2021/05/01/Supervisor/</loc>
+    
+    <lastmod>2021-09-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://vcnone.github.io/index.html</loc>
     
     <lastmod>2021-09-11</lastmod>
     
@@ -33,20 +54,6 @@
     <loc>https://vcnone.github.io/home/index.html</loc>
     
     <lastmod>2021-09-03</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://vcnone.github.io/2021/06/15/nginx反向代理GIthubPage/</loc>
-    
-    <lastmod>2021-06-15</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://vcnone.github.io/2021/06/14/GithubPage/</loc>
-    
-    <lastmod>2021-06-15</lastmod>
     
   </url>
   
@@ -81,15 +88,15 @@
 
   <url>
     <loc>https://blog.vcnone.top/</loc>
-    <lastmod>2021-09-11</lastmod>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://blog.vcnone.top/tags/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2021-09-11</lastmod>
+    <loc>https://blog.vcnone.top/tags/Debian/</loc>
+    <lastmod>2021-09-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
