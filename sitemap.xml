@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://vcnone.github.io/2021/10/25/Hexo——GitHub-Page-云服务器同时部署/</loc>
+    
+    <lastmod>2021-10-25</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://vcnone.github.io/2021/09/12/Debian下LNMP搭建/</loc>
     
     <lastmod>2021-09-12</lastmod>
@@ -88,7 +95,7 @@
 
   <url>
     <loc>https://blog.vcnone.top/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -96,7 +103,7 @@
   
   <url>
     <loc>https://blog.vcnone.top/tags/Debian/</loc>
-    <lastmod>2021-09-12</lastmod>
+    <lastmod>2021-10-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

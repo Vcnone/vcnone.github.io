@@ -85,7 +85,7 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/home/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">6</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">7</span></a></li>
   </ul>
 </nav>
 
@@ -131,7 +131,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -207,7 +207,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.vcnone.top/2021/09/12/Debian%E4%B8%8BLNMP%E6%90%AD%E5%BB%BA/">
+    <link itemprop="mainEntityOfPage" href="https://blog.vcnone.top/2021/10/25/Hexo%E2%80%94%E2%80%94GitHub-Page-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%90%8C%E6%97%B6%E9%83%A8%E7%BD%B2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -220,7 +220,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/09/12/Debian%E4%B8%8BLNMP%E6%90%AD%E5%BB%BA/" class="post-title-link" itemprop="url">Debian下LNMP搭建</a>
+          <a href="/2021/10/25/Hexo%E2%80%94%E2%80%94GitHub-Page-%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%90%8C%E6%97%B6%E9%83%A8%E7%BD%B2/" class="post-title-link" itemprop="url">Hexo——GitHub Page+云服务器同时部署</a>
         </h2>
 
         <div class="post-meta-container">
@@ -232,7 +232,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-09-12 20:37:33 / 修改时间：20:44:01" itemprop="dateCreated datePublished" datetime="2021-09-12T20:37:33+08:00">2021-09-12</time>
+      <time title="创建时间：2021-10-25 11:00:33 / 修改时间：11:23:47" itemprop="dateCreated datePublished" datetime="2021-10-25T11:00:33+08:00">2021-10-25</time>
     </span>
 
   
@@ -245,21 +245,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><strong>参考</strong>：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_34232363/article/details/88728946" title="Debian9(Stretch) 下编译安装LNMP环境">Debian9(Stretch) 下编译安装LNMP环境</a></p>
-<hr>
-<h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p><strong>apt</strong>安装<strong>MariaDB</strong>，<strong>PHP</strong></p>
-<p><strong>编译</strong>安装<strong>Nginx</strong></p>
-<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><h2 id="Nginx-需要的额外库"><a href="#Nginx-需要的额外库" class="headerlink" title="Nginx 需要的额外库"></a>Nginx 需要的额外库</h2><p>主要是三个开发库，<a target="_blank" rel="noopener" href="https://www.openssl.org/" title="openssl">openssl</a>，<a target="_blank" rel="noopener" href="https://www.zlib.net/" title="zlib">zlib</a>，<a target="_blank" rel="noopener" href="https://www.pcre.org/" title="pcre">pcre</a>，可以通过Debian本身的库安装，也可以选择源码安装。<br>编译安装Nginx需要提前安装开发库或下载三个开发库源码包。<br><strong>PS</strong>：这里需要注意源码版本兼容性</p>
-<h1 id="配置过程"><a href="#配置过程" class="headerlink" title="配置过程"></a>配置过程</h1><h2 id="MariaDB"><a href="#MariaDB" class="headerlink" title="MariaDB"></a>MariaDB</h2><p>安装MariaDB服务端和客户端</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install mariadb-server</span><br></pre></td></tr></table></figure>
-<p>安装完成后服务将自动启动，通过以下命令检查服务是否正常</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status mariadb</span><br></pre></td></tr></table></figure>
-<p>运行MariaDB安全脚本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mysql_secure_installation </span><br></pre></td></tr></table></figure>
-<h2 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h2><p>编译安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/etc/nginx --group=nginx --user=nginx --sbin-path=/usr/sbin/nginx --modules-path=/usr/lib/nginx/modules --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/<span class="built_in">log</span>/nginx/error.log --http-log-path=/var/<span class="built_in">log</span>/nginx/access.log --pid-path=/var/run/nginx.pid --lock-path=/var/run/nginx.lock --http-client-body-temp-path=/var/cache/nginx/client_temp --http-proxy-temp-path=/var/cache/nginx/proxy_temp --http-fastcgi-temp-path=/var/cache/nginx/fastcgi_temp --http-uwsgi-temp-path=/var/cache/nginx/uwsgi_temp --http-scgi-temp-path=/var/cache/nginx/scgi_temp --user=nginx --group=nginx --with-compat --with-file-aio --with-threads --with-http_addition_module --with-http_auth_request_module --with-http_dav_module --with-http_flv_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_mp4_module --with-http_random_index_module --with-http_realip_module --with-http_secure_link_module --with-http_slice_module --with-http_ssl_module --with-http_stub_status_module --with-http_sub_module --with-http_v2_module --with-mail --with-mail_ssl_module --with-stream --with-stream_realip_module --with-stream_ssl_module --with-stream_ssl_preread_module  --with-pcre --with-pcre-jit  --with-openssl=../openssl-1.1.1d --with-openssl-opt=no-nextprotoneg --with-zlib=../zlib- --with-debug --add-module=../nginx-dav-ext-module --add-module=../headers-more-nginx-module</span><br></pre></td></tr></table></figure>
-<p><strong>PS</strong>：如果是使用二进制包安装了zlib,pcre,openssl,及相应的开发库，不需要指定路径。</p>
-<h2 id="PHP"><a href="#PHP" class="headerlink" title="PHP"></a>PHP</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install php7.4</span><br><span class="line">apt install php7.4-fpm php7.4-mysql</span><br></pre></td></tr></table></figure>
+          <h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h2 id="GitHub-Page"><a href="#GitHub-Page" class="headerlink" title="GitHub Page"></a>GitHub Page</h2><p>正常配置好</p>
+<h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install git</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -279,7 +267,7 @@
 
 
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/Wrong/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/Wrong/page/6/">6</a><a class="extend next" rel="next" href="/Wrong/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/Wrong/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/Wrong/page/7/">7</a><a class="extend next" rel="next" href="/Wrong/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 <script src="/js/comments.js"></script>
 </div>

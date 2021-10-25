@@ -85,7 +85,7 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/home/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">6</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">7</span></a></li>
   </ul>
 </nav>
 
@@ -131,7 +131,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -207,7 +207,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://blog.vcnone.top/2021/06/14/GithubPage/">
+    <link itemprop="mainEntityOfPage" href="https://blog.vcnone.top/2021/06/15/nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86GIthubPage/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -220,7 +220,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/06/14/GithubPage/" class="post-title-link" itemprop="url">GithubPage——Github+Hexo</a>
+          <a href="/2021/06/15/nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86GIthubPage/" class="post-title-link" itemprop="url">nginx反向代理GithubPage</a>
         </h2>
 
         <div class="post-meta-container">
@@ -231,14 +231,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-06-14 10:45:20" itemprop="dateCreated datePublished" datetime="2021-06-14T10:45:20+08:00">2021-06-14</time>
+      <time title="创建时间：2021-06-15 19:26:44" itemprop="dateCreated datePublished" datetime="2021-06-15T19:26:44+08:00">2021-06-15</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-12 20:41:27" itemprop="dateModified" datetime="2021-09-12T20:41:27+08:00">2021-09-12</time>
+        <time title="修改时间：2021-09-12 20:40:56" itemprop="dateModified" datetime="2021-09-12T20:40:56+08:00">2021-09-12</time>
       </span>
 
   
@@ -251,65 +251,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><strong>参考</strong>：<a target="_blank" rel="noopener" href="http://wu.run/2018/12/20/hexo-from-github-2-aliyun/">RunDouble’s Blog</a></p>
+          <p><strong>参考</strong>：<a target="_blank" rel="noopener" href="https://blog.kelu.org/tech/2017/05/06/github-pages-reverse-proxy.html">血衫非弧</a></p>
 <hr>
-<h1 id="配置Github"><a href="#配置Github" class="headerlink" title="配置Github"></a>配置Github</h1><p>登录到<a target="_blank" rel="noopener" href="https://github.com/">GitHub</a>，创建新仓库，仓库名应该为：<strong>用户名</strong>.github.io</p>
-<p><strong>用户名</strong>为GitHub帐号名，这是固定写法。</p>
-<h1 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h1><p>下载地址：<a target="_blank" rel="noopener" href="https://github.com/git-for-windows/git/releases">Git - Downloading Package</a> ，下载安装。</p>
-<p>在命令行里输入<code>git --version</code>，查看git版本，测试是否安装成功</p>
-<p>若安装失败，解决git安装问题。</p>
-<p><a target="_blank" rel="noopener" href="https://weibo.com/liaoxuefeng"><strong>廖雪峰</strong></a>老师的<a target="_blank" rel="noopener" href="https://www.liaoxuefeng.com/wiki/896043488029600">Git教程</a> </p>
-<h1 id="配置Git"><a href="#配置Git" class="headerlink" title="配置Git"></a>配置Git</h1><h2 id="全局配置"><a href="#全局配置" class="headerlink" title="全局配置"></a>全局配置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;GitHub用户名&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;GitHub注册邮箱&quot;</span></span><br></pre></td></tr></table></figure>
+<h1 id="DNS重定向"><a href="#DNS重定向" class="headerlink" title="DNS重定向"></a>DNS重定向</h1><p>配置DNS重定向到目标服务器。</p>
+<h1 id="nginx"><a href="#nginx" class="headerlink" title="nginx"></a>nginx</h1><figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name  域名;</span><br><span class="line">        rewrite ^(.*)$ https://$host$request_uri permanent;    </span><br><span class="line">&#125;</span><br><span class="line">server &#123;</span><br><span class="line">        listen 443 ssl http2;</span><br><span class="line">        server_name  域名;</span><br><span class="line">        location / </span><br><span class="line">        &#123;</span><br><span class="line">            proxy_pass         http://******.github.io;</span><br><span class="line">            proxy_set_header   X-Host                        $host;</span><br><span class="line">            proxy_set_header   X-Real-IP               $remote_addr;</span><br><span class="line">            proxy_set_header   X-Forwarded-For  $proxy_add_x_forwarded_for;</span><br><span class="line">            proxy_set_header User-Agent &quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36&quot;;</span><br><span class="line">            #缓存</span><br><span class="line">            proxy_cache_valid  200 206 304 301 302 1d; #对httpcode为200…的缓存1天 </span><br><span class="line">            proxy_cache_valid  any 1d;    #其他的缓存多长时间  </span><br><span class="line">            proxy_cache_key $uri;  #定义缓存唯一key,通过唯一key来进行hash存取</span><br><span class="line">        &#125;</span><br><span class="line">        access_log off; #access_log end</span><br><span class="line">        error_log off; #error_log end</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="生成ssh密钥文件"><a href="#生成ssh密钥文件" class="headerlink" title="生成ssh密钥文件"></a>生成ssh密钥文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;GitHub注册邮箱&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="配置ssh密钥"><a href="#配置ssh密钥" class="headerlink" title="配置ssh密钥"></a>配置ssh密钥</h3><p>打开<a target="_blank" rel="noopener" href="https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key；或打开仓库的Deploy keys页面，新建new deploy key；</p>
-<p>其中Title为标题，Key填生成的id_rsa.pub中内容</p>
-<p>在Git Bash中检测GitHub公钥设置是否成功，输入 <code>ssh git@github.com</code> ：</p>
-<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PTY allocation request failed on channel 0</span><br><span class="line">Hi *******! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span><br><span class="line">Connection to github.com closed.</span><br></pre></td></tr></table></figure>
-
-<p>如上则说明成功。</p>
-<h1 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h1><p>下载地址：<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">Download | Node.js</a> ，下载安装。注意安装Node.js会包含<strong>环境变量</strong>及<strong>npm</strong>的安装。</p>
-<p>安装后，在命令行中输入 <code>node -v</code>，检测Node.js是否安装成功 ；输入<code>npm -v</code>，检测npm是否安装成功</p>
-<h1 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h1><p>以<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>作为个人博客网站的框架。</p>
-<p>使用npm命令安装Hexo：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
-
-<p>安装完成后，在上一级目录<code>D:\&gt;</code>初始化博客，可以命名为blog，Hexo框架与以后发布的网页都在这个文件夹中。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog</span><br></pre></td></tr></table></figure>
-
-<p>生成并预览博客</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-
-<p>常用的Hexo 命令</p>
-<p><code>npm install hexo -g</code> #安装Hexo<br><code>npm update hexo -g</code> #升级<br><code>hexo init</code> #初始化博客</p>
-<p>命令简写<br><code>hexo n &quot;我的博客&quot;</code> == <code>hexo new &quot;我的博客&quot;</code> #新建文章<br><code>hexo g</code> == <code>hexo generate</code> #生成<br><code>hexo s</code> == <code>hexo server</code> #启动服务预览<br><code>hexo d</code> == <code>hexo deploy</code> #部署</p>
-<p><code>hexo server</code> #Hexo会监视文件变动并自动更新，无须重启服务器<br><code>hexo server -s</code> #静态模式<br><code>hexo server -p 5000</code> #更改端口<br><code>hexo server -i 192.168.1.1</code> #自定义 IP<br><code>hexo clean</code> #清除缓存，若是网页正常情况下可以忽略这条命令</p>
-<h1 id="推送网站"><a href="#推送网站" class="headerlink" title="推送网站"></a>推送网站</h1><ul>
-<li>blog根目录里的_config.yml文件，称为<strong>站点配置文件</strong></li>
-<li>根目录里的themes文件夹，里面也有个_config.yml文件，称为<strong>主题配置文件</strong></li>
-</ul>
-<p>将我们的Hexo与GitHub关联起来，打开<strong>站点配置文件</strong>_config.yml，翻到最后修改</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">	<span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">	<span class="attr">repo:</span> <span class="string">在GitHub上创建仓库的完整路径</span></span><br><span class="line">	<span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
-
-<p>安装Git部署插件，输入命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>此时生成并部署博客</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
-
-<p>博客就被部署到：<strong>用户名</strong>.github.io</p>
-<h1 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h1><p>基于阿里云，在<strong>管理控制台</strong>进入<strong>域名解析</strong>管理页面</p>
-<p>添加一条CNAME解析</p>
-<ol>
-<li>主机记录：@</li>
-<li>记录值：<strong>用户名</strong>.github.io</li>
-<li>其余默认即可</li>
-</ol>
-<p>本地博客文件夹 ，在blog/source目录下，创建一个CNAME文件，输入自定义域名。</p>
-<p>注意：不是txt文件。如果域名带有www，那么访问的时候必须带有www完整的域名才可以访问，但如果不带有www，以后访问的时候带不带www都可以访问。</p>
-<h1 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h1><p>更换不同的主题，主题传送门：<a target="_blank" rel="noopener" href="https://hexo.io/themes/">Themes</a>。</p>
-<p><a target="_blank" rel="noopener" href="https://theme-next.org/">Next</a></p>
+<p>配置说明：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">proxy_set_header Host $host 设置请求头的Host为反向代理服务器的Host</span><br><span class="line"></span><br><span class="line">proxy_set_header X-Real-IP $remote_addr 设置请求头的X-Real-IP为客户端真实IP</span><br><span class="line"></span><br><span class="line">proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for 把请求来源的IP添加到请求头的X-Forwarded-For字段</span><br><span class="line"></span><br><span class="line">X-Forwarded-For:简称XFF头，它代表客户端，也就是HTTP的请求端真实的IP，只有在通过了HTTP代理或者负载均衡服务器时才会添加该项。 它不是RFC中定义的标准请求头信息，在squid缓存代理服务器开发文档中可以找到该项的详细介绍。 标准格式如下：X-Forwarded-For: client1, proxy1, proxy2。</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -329,7 +277,7 @@
 
 
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/Wrong/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/Wrong/">1</a><a class="page-number" href="/Wrong/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/Wrong/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/Wrong/page/6/">6</a><a class="extend next" rel="next" href="/Wrong/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/Wrong/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/Wrong/">1</a><a class="page-number" href="/Wrong/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/Wrong/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/Wrong/page/7/">7</a><a class="extend next" rel="next" href="/Wrong/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 <script src="/js/comments.js"></script>
 </div>
