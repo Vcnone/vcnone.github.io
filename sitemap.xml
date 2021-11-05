@@ -94,16 +94,16 @@
   
 
   <url>
-    <loc>https://blog.vcnone.top/</loc>
-    <lastmod>2021-11-04</lastmod>
+    <loc>https://vcnone.top/</loc>
+    <lastmod>2021-11-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://blog.vcnone.top/tags/Debian/</loc>
-    <lastmod>2021-11-04</lastmod>
+    <loc>https://vcnone.top/tags/Debian/</loc>
+    <lastmod>2021-11-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
