@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://vcnone.github.io/2021/10/25/Hexo同时部署GitHub Page与云服务器/</loc>
+    
+    <lastmod>2021-11-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://vcnone.github.io/link/index.html</loc>
     
     <lastmod>2021-11-05</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://vcnone.github.io/index.html</loc>
     
     <lastmod>2021-11-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://vcnone.github.io/2021/10/25/Hexo同时部署GitHub Page与云服务器/</loc>
-    
-    <lastmod>2021-10-25</lastmod>
     
   </url>
   
