@@ -80,3 +80,43 @@ h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
 #rightside_config i.fas.fa-cog.fa-spin {
     animation: fa-spin 5s linear infinite ;
 }
+
+/* @0.0.0 */
+
+/* 说明文字居中 */
+/*
+.jg-caption{
+    text-align: center !important;
+}
+*/
+/* 图片下增加小图标 */
+/*
+.jg-caption-visible::before {
+    content: "⊙ ";
+} 
+.fancybox-caption__body::before {
+    content: "⊙ ";
+} 
+.img-alt.is-center::before {
+    content: "⊙ ";
+}
+*/
+
+/* 滚动条 */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(136, 207, 219);
+    background-image: -webkit-linear-gradient( 90deg, rgba(255, 255, 255, 0.4) 20%, transparent 20%, transparent 40%, rgba(255, 255, 255, 0.4) 40%, rgba(255, 255, 255, 0.4) 60%, transparent 60%, transparent 80%, rgba(255, 255, 255, 0.4) 80%, rgba(255, 255, 255, 0.4) 100%);
+    border-radius: 2em;
+}
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+::-moz-selection {
+    color: #fff;
+    background-color: #c2f747;
+}
+/* @0.0.1 */
