@@ -1,0 +1,38 @@
+- class_name: 友情链接 👋👋
+  class_desc: 大佬带飞
+  link_list:
+    - name: EdNovas
+      link: https://ednovas.xyz/
+      avatar: https://cdn.jsdelivr.net/gh/wdm1732418365/CDN/New%20folder/icon.png
+      descr: Ed大佬，网络通信
+    - name: guole's Blog
+      link: https://guole.fun/
+      avatar: https://guole.fun/img/gl.jpg
+      descr: guole大佬，主题美化
+- class_name: 网站
+  class_desc: 值得推荐的网站
+  link_list:
+    - name: Hexo
+      link: https://hexo.io/zh-cn/
+      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+      descr: 快速、简单且强大的网页框架
+    - name: Hugo
+      link: https://gohugo.io/
+      avatar: https://cdn.guole.fun/logo/hugo.png
+      descr: Go 语言的静态网站生成器
+    - name: Butterfly
+      link: https://butterfly.js.org/
+      avatar: https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-github-avatar.png
+      descr: 本站主题，真好看
+    - name: Lovelt
+      link: https://gohugo.io/
+      avatar: https://cdn.guole.fun/logo/lovelt.png
+      descr: Hugo主题
+    - name: 阿里图标库
+      link: https://www.iconfont.cn/
+      avatar: https://cdn.guole.fun/logo/weizhi.png
+      descr: 多次使用，感谢
+    - name: 8K壁纸库
+      link: https://wallhaven.cc/
+      avatar: https://cdn.guole.fun/logo/weizhi.png
+      descr: 背景
