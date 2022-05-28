@@ -1,0 +1,23 @@
+site_name: Vcnone's Wiki
+site_author: 'VC'
+site_description: '恒以致远'
+site_url: 'https://www.xncoding.com/'
+
+nav:
+- Index: index.md
+- GithubPage: 
+    - Hexo: 
+        - Install: GithubPage.md
+        - Nginx: nginx反向代理GIthubPage.md
+    - ECS:
+        - Deploy: Hexo-deploy.md
+- Sever:
+    - LNMP: LNMP搭建.md
+    - Supervisor: Supervisor.md
+    - Syncthing: Syncthing.md
+    - Python:
+      - pip: Python-pip.md
+- About: about.md
+
+theme:
+  name: material
