@@ -1,30 +1,14 @@
----
-title: Ubuntu 20.04 lts 安装 LNMP
-date: 2021-09-12 20:37:33
-cover: https://img.wordpressjc.com/wp-content/uploads/2019/05/1558091755-lnmp.jpeg
-tags: 
-- [服务部署]
-categories:
-- [建站]
----
-
-**参考**：[Debian9(Stretch) 下编译安装LNMP环境](https://blog.csdn.net/weixin_34232363/article/details/88728946 "Debian9(Stretch) 下编译安装LNMP环境")
-
-------------
+# 
 
 # 一、环境
 
-- **Ubuntu 20.04 lts**
-
+- **Ubuntu lts 20.04**
 - [**Nginx-1.20.2**](https://nginx.org/download/nginx-1.20.2.tar.gz)
-  
   - [**zlib-1.2.12**](http://zlib.net/zlib-1.2.12.tar.gz)
   - [**pcre-8.45**](https://versaweb.dl.sourceforge.net/project/pcre/pcre/8.45/pcre-8.45.zip)
   - [**openssl-1.1.1o**](https://www.openssl.org/source/openssl-1.1.1o.tar.gz)
-
 - [**PHP-7.4.29**](https://www.php.net/distributions/php-7.4.29.tar.gz)
-
-- [**MariaDB-10.3**](https://dlm.mariadb.com/2145683/MariaDB/mariadb-10.7.3/repo/ubuntu/mariadb-10.7.3-ubuntu-focal-amd64-debs.tar) 
+- [**MariaDB-10.3**](https://dlm.mariadb.com/2145683/MariaDB/mariadb-10.7.3/repo/ubuntu/mariadb-10.7.3-ubuntu-focal-amd64-debs.tar)
 
 # 二、 安装过程
 
@@ -67,7 +51,10 @@ Reload privilege tables now? [Y/n] Y
 
 ## 2.2 Nginx 源码安装
 
-三个源码包： [**zlib-1.2.12**](http://zlib.net/zlib-1.2.12.tar.gz)(压缩库) [**pcre-8.45**](https://versaweb.dl.sourceforge.net/project/pcre/pcre/8.45/pcre-8.45.zip)(正则表达式库) [**openssl-1.1.1o**](https://www.openssl.org/source/openssl-1.1.1o.tar.gz)(加密库，如果要使用HTTPS，这个库是必须的)
+三个源码包：
+[**zlib-1.2.12**](http://zlib.net/zlib-1.2.12.tar.gz)(压缩库)
+[**pcre-8.45**](https://versaweb.dl.sourceforge.net/project/pcre/pcre/8.45/pcre-8.45.zip)(正则表达式库)
+[**openssl-1.1.1o**](https://www.openssl.org/source/openssl-1.1.1o.tar.gz)(加密库，如果要使用HTTPS，这个库是必须的)
 
 ### 2.2.1 创建用户
 
@@ -118,11 +105,24 @@ ExecStop=/bin/kill -s TERM $MAINPID
 WantedBy=multi-user.target
 ```
 
-这个可以在nginx 官网找到，可以按照自己需求修改。注意路径修改成自己的安装路径。 `systemctl daemon-reload` `systemctl start nginx.service` 启动Nginx `systemctl enable nginx.service` 开机启动。
+这个可以在nginx 官网找到，可以按照自己需求修改。注意路径修改成自己的安装路径。
+`systemctl daemon-reload`
+`systemctl start nginx.service` 启动Nginx
+`systemctl enable nginx.service` 开机启动
 
+```
 记得，如果中途修改了service文件，一定要先运行 systemctl daemon-reload重新加载守护进程文件。然后运行 systemctl start nginx.service重启服务。
+```
 
-## 2.3 PHP安装
+## 2.3 PHP 安装
+
+PHP 安装比较简单，主要是选择你要安装的拓展或者需要开启的功能
+
+可以使用./configure --help 来浏览源码安装提供的安装选项
+
+有些属于PHP内置的功能，你只需要 enable或者disable，比如php-fpm，是需要启用的。
+
+有些拓展是可以动态加载的，称之为shared extension,但是官方也说了，并不是所有的拓展都是能够shared.
 
 ### 2.3.1 安装
 
@@ -130,19 +130,18 @@ WantedBy=multi-user.target
 apt-get install php7.4 php7.4-fpm
 ```
 
-### 2.3.2 配置Nginx支持
+### 2.3.3 配置Nginx支持
 
 需要PHP的网页启用
 
 1. 在`server{}`内，找到`index`开头的配置行，在该行中添加`index.php`。
-
 2. 在`server{}`内，找到`location ~ \.php$ {}`，启用以下行
-
-```
-location ~ \.php$ {
-   include snippets/fastcgi-php.conf;
-   fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
-}
-```
-
-待续~~~
+   
+   ```bash
+   location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+   }
+   ```
+   
+   
