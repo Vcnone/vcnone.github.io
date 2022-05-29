@@ -492,16 +492,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#supervisor_1" class="md-nav__link">
+    安装supervisor
+  </a>
+  
+    <nav class="md-nav" aria-label="安装supervisor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#pip" class="md-nav__link">
     pip方式
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#apt" class="md-nav__link">
     apt方式
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supervisor_2" class="md-nav__link">
+    配置supervisor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    开机启动
+  </a>
+  
+    <nav class="md-nav" aria-label="开机启动">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#systemctl" class="md-nav__link">
+    配置systemctl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service" class="md-nav__link">
+    刷新service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#766" class="md-nav__link">
+    修改文件权限为766
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supervisorctl" class="md-nav__link">
+    supervisorctl常用命令：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -623,16 +684,77 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#supervisor_1" class="md-nav__link">
+    安装supervisor
+  </a>
+  
+    <nav class="md-nav" aria-label="安装supervisor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#pip" class="md-nav__link">
     pip方式
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#apt" class="md-nav__link">
     apt方式
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supervisor_2" class="md-nav__link">
+    配置supervisor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    开机启动
+  </a>
+  
+    <nav class="md-nav" aria-label="开机启动">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#systemctl" class="md-nav__link">
+    配置systemctl
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service" class="md-nav__link">
+    刷新service
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#766" class="md-nav__link">
+    修改文件权限为766
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supervisorctl" class="md-nav__link">
+    supervisorctl常用命令：
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -650,17 +772,18 @@
                 
 
 
-<h1 id="supervisor">安装supervisor</h1>
-<h2 id="pip">pip方式</h2>
+<h1 id="supervisor">Supervisor</h1>
+<h2 id="supervisor_1">安装supervisor</h2>
+<h3 id="pip">pip方式</h3>
 <pre><code class="language-bash">wget https://bootstrap.pypa.io/get-pip.py
 python get-pip.py
 rm -rf get-pip.py
 pip install supervisor
 </code></pre>
-<h2 id="apt">apt方式</h2>
+<h3 id="apt">apt方式</h3>
 <pre><code class="language-bash">apt-get install supervisor
 </code></pre>
-<h1 id="supervisor_1">配置supervisor</h1>
+<h2 id="supervisor_2">配置supervisor</h2>
 <pre><code class="language-bash">echo_supervisord_conf &gt; /etc/supervisor/supervisord.conf(配置文件位置)
 echo &quot;supervisord&quot; &gt;&gt; /etc/rc.local
 cat &gt;&gt;/etc/supervisord.conf&lt;&lt;'EOF'
@@ -684,8 +807,8 @@ user = root
 
 EOF
 </code></pre>
-<h1 id="supervisor_2">配置Supervisor开机启动</h1>
-<h2 id="systemctl">配置systemctl</h2>
+<h2 id="_1">开机启动</h2>
+<h3 id="systemctl">配置systemctl</h3>
 <p>进入<code>/lib/systemd/system</code>目录，并创建<code>supervisor.service</code>文件，该文件内容如下所示。</p>
 <pre><code class="language-bash">root@VC:/lib/systemd/system#whereis supervisord
 supervisord: *查到的地址*/supervisord
@@ -693,7 +816,6 @@ root@VC:/lib/systemd/system# whereis supervisorctl
 supervisorctl: *查到的地址*/supervisorctl
 # 创建文件
 root@VC:/lib/systemd/system# vim supervisor.service
-
 
 [Unit]
 Description=supervisor
@@ -711,15 +833,15 @@ RestartSec=42s
 [Install]
 WantedBy=multi-user.target
 </code></pre>
-<h2 id="_1">设置开机启动</h2>
+<h3 id="service">刷新service</h3>
 <pre><code class="language-bash">root@VC:/lib/systemd/system# systemctl enable supervisor.service
 Created symlink from /etc/systemd/system/multi-user.target.wants/supervisor.service to /lib/systemd/system/supervisor.service.
 root@VC:/lib/systemd/system# systemctl daemon-reload
 </code></pre>
-<h2 id="766">修改文件权限为766</h2>
+<h3 id="766">修改文件权限为766</h3>
 <pre><code class="language-bash">root@VC:/lib/systemd/system# chmod 766 supervisor.service
 </code></pre>
-<h2 id="supervisorctl">supervisorctl命令行下的命令：</h2>
+<h3 id="supervisorctl">supervisorctl常用命令：</h3>
 <pre><code class="language-bash">supervisorctl status  #查看supervisord监控的所有进程的状态
 supervisorctl celery status  #查看celery进程的状态
 supervisorctl stop xxx  #停止某一个进程(xxx)，xxx为[program:theprogramname]里配置的值

@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#nvm" class="md-skip">
+        <a href="#nvm-windows" class="md-skip">
           Skip to content
         </a>
       
@@ -297,9 +297,68 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          NVM-Windows
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         NVM-Windows
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nvm" class="md-nav__link">
+    nvm是什么
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvm_1" class="md-nav__link">
+    nvm下载
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvm_2" class="md-nav__link">
+    nvm安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvm_3" class="md-nav__link">
+    nvm命令提示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvm_4" class="md-nav__link">
+    nvm常见问题
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -578,6 +637,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nvm" class="md-nav__link">
+    nvm是什么
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvm_1" class="md-nav__link">
+    nvm下载
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvm_2" class="md-nav__link">
+    nvm安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvm_3" class="md-nav__link">
+    nvm命令提示
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nvm_4" class="md-nav__link">
+    nvm常见问题
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -590,11 +692,12 @@
                 
 
 
-<h1 id="nvm">nvm是什么</h1>
+<h1 id="nvm-windows">NVM-Windows</h1>
+<h2 id="nvm">nvm是什么</h2>
 <p><strong>nvm</strong>全英文也叫<strong>node.js version management</strong>，是一个<strong>nodejs</strong>的版本管理工具。<strong>nvm</strong>和<strong>n</strong>都是<strong>node.js</strong>版本管理工具，为了解决<strong>node.js</strong>各种版本存在不兼容现象可以通过它可以安装和切换不同版本的<strong>node.js</strong>。</p>
-<h1 id="nvm_1">nvm下载</h1>
+<h2 id="nvm_1">nvm下载</h2>
 <p>在<a href="https://github.com/coreybutler/nvm-windows/releases">github</a>上下载最新版本,本次下载安装的是windows版本。</p>
-<h1 id="nvm_2">nvm安装</h1>
+<h2 id="nvm_2">nvm安装</h2>
 <ol>
 <li><strong>卸载之前的node后安装nvm</strong>, nvm-setup.exe安装版，直接运行nvm-setup.exe</li>
 <li>选择nvm安装路径(无空格与中文)</li>
@@ -603,22 +706,21 @@
 <li>安装完确认</li>
 </ol>
 <p>打开CMD，输入命令 nvm ，安装成功则可以看到列出了各种命令，<strong>nvm-windows 需要管理员权限</strong>。</p>
-<h1 id="nvm_3">nvm命令提示</h1>
-<ul>
-<li>nvm arch：显示node是运行在32位还是64位。</li>
-<li>nvm install <version> [arch] ：安装node， version是特定版本也可以是最新稳定版本latest。可选参数arch指定安装32位还是64位版本，默认是系统位数。可以添加--insecure绕过远程服务器的SSL。</li>
-<li><strong>nvm list [available]</strong> <strong>：显示已安装的列表。可选参数available，显示可安装的所有版本。list可简化为ls。</strong></li>
-<li>nvm on ：开启node.js版本管理。</li>
-<li>nvm off ：关闭node.js版本管理。</li>
-<li>nvm proxy [url] ：设置下载代理。不加可选参数url，显示当前代理。将url设置为none则移除代理。</li>
-<li>nvm node_mirror [url] ：设置node镜像。默认是https://nodejs.org/dist/。如果不写url，则使用默认url。设置后可至安装目录settings.txt文件查看，也可直接在该文件操作。</li>
-<li>nvm npm_mirror [url] ：设置npm镜像。https://github.com/npm/cli/archive/。如果不写url，则使用默认url。设置后可至安装目录settings.txt文件查看，也可直接在该文件操作。</li>
-<li>nvm uninstall <version> ：卸载指定版本node。</li>
-<li><strong>nvm use [version] [arch]</strong> <strong>：使用制定版本node。可指定32/64位。</strong></li>
-<li>nvm root [path] ：设置存储不同版本node的目录。如果未设置，默认使用当前目录。</li>
-<li>nvm version ：显示nvm版本。version可简化为v。</li>
-</ul>
-<h1 id="nvm_4">nvm常见问题</h1>
+<h2 id="nvm_3">nvm命令提示</h2>
+<pre><code>- nvm arch：显示node是运行在32位还是64位。
+- nvm install &lt;version&gt; [arch] ：安装node， version是特定版本也可以是最新稳定版本latest。可选参数arch指定安装32位还是64位版本，默认是系统位数。可以添加--insecure绕过远程服务器的SSL。
+- **nvm list [available]** **：显示已安装的列表。可选参数available，显示可安装的所有版本。list可简化为ls。**
+- nvm on ：开启node.js版本管理。
+- nvm off ：关闭node.js版本管理。
+- nvm proxy [url] ：设置下载代理。不加可选参数url，显示当前代理。将url设置为none则移除代理。
+- nvm node_mirror [url] ：设置node镜像。默认是https://nodejs.org/dist/。如果不写url，则使用默认url。设置后可至安装目录settings.txt文件查看，也可直接在该文件操作。
+- nvm npm_mirror [url] ：设置npm镜像。https://github.com/npm/cli/archive/。如果不写url，则使用默认url。设置后可至安装目录settings.txt文件查看，也可直接在该文件操作。
+- nvm uninstall &lt;version&gt; ：卸载指定版本node。
+- **nvm use [version] [arch]** **：使用制定版本node。可指定32/64位。**
+- nvm root [path] ：设置存储不同版本node的目录。如果未设置，默认使用当前目录。
+- nvm version ：显示nvm版本。version可简化为v。
+</code></pre>
+<h2 id="nvm_4">nvm常见问题</h2>
 <p>如果下载node过慢，请更换国内镜像源, 在 nvm 的安装路径下，找到 settings.txt，设置node_mirro与npm_mirror为国内镜像地址。下载就飞快了~~</p>
 <p>nvm node_mirror https://npmmirror.com/mirrors/node/
 nvm npm_mirror https://npm.taobao.org/mirrors/npm/</p>

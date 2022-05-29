@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#syncthing-discovery-server" class="md-skip">
+        <a href="#syncthing" class="md-skip">
           Skip to content
         </a>
       
@@ -481,9 +481,54 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Syncthing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Syncthing
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#syncthing-discovery-server" class="md-nav__link">
+    Syncthing Discovery Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syncthing-relay-server" class="md-nav__link">
+    Syncthing Relay Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supervisor" class="md-nav__link">
+    配置Supervisor
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -578,6 +623,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#syncthing-discovery-server" class="md-nav__link">
+    Syncthing Discovery Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#syncthing-relay-server" class="md-nav__link">
+    Syncthing Relay Server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supervisor" class="md-nav__link">
+    配置Supervisor
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -590,14 +664,15 @@
                 
 
 
-<h1 id="syncthing-discovery-server">Syncthing Discovery Server</h1>
+<h1 id="syncthing">Syncthing</h1>
+<h2 id="syncthing-discovery-server">Syncthing Discovery Server</h2>
 <p>下载 stdiscosrv 包</p>
 <pre><code class="language-bash">wget https://github.com/syncthing/discosrv/releases/download/*version*/stdiscosrv-linux-amd64-*version*.tar.gz
 </code></pre>
 <p>解压</p>
 <pre><code class="language-bash">tar -xzvf stdiscosrv-linux-amd64-*version*.tar.gz
 </code></pre>
-<h1 id="syncthing-relay-server">Syncthing Relay Server</h1>
+<h2 id="syncthing-relay-server">Syncthing Relay Server</h2>
 <p>下载strelaysrv</p>
 <pre><code class="language-bash">wget https://github.com/syncthing/relaysrv/releases/download/*version*/strelaysrv-linux-amd64-*version*.tar.gz
 </code></pre>
@@ -615,6 +690,7 @@
 mkdir /etc/relaysrv
 chown relaysrv /etc/relaysrv
 </code></pre>
+<h2 id="supervisor">配置Supervisor</h2>
 <p>在<code>/etc/supervisord.conf</code>文档最后加上下面这段设置</p>
 <pre><code class="language-bash">[program:relaysrv]
 command=relaysrv -keys /etc/relaysrv -pools=&quot;&quot;

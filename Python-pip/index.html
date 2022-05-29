@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#pip" class="md-skip">
           Skip to content
         </a>
       
@@ -523,9 +523,81 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          pip
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         pip
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    卸载旧版本
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    安装步骤
+  </a>
+  
+    <nav class="md-nav" aria-label="安装步骤">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    补全相关组件：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt" class="md-nav__link">
+    编辑apt的源文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python36" class="md-nav__link">
+    安装python3.6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip36" class="md-nav__link">
+    安装pip3.6
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -580,6 +652,62 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    卸载旧版本
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    安装步骤
+  </a>
+  
+    <nav class="md-nav" aria-label="安装步骤">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    补全相关组件：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apt" class="md-nav__link">
+    编辑apt的源文件
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python36" class="md-nav__link">
+    安装python3.6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pip36" class="md-nav__link">
+    安装pip3.6
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -592,15 +720,16 @@
                 
 
 
-<h1 id="_1">卸载旧版本</h1>
+<h1 id="pip">pip</h1>
+<h2 id="_1">卸载旧版本</h2>
 <p>如果有旧的python3.x版本，可以先卸载，但建议不要卸载，因为有很多依赖，替换版本号，执行以下命令:</p>
 <pre><code class="language-bash">apt-get autoremove python3.5 python3.5-dev
 </code></pre>
-<h1 id="_2">安装步骤</h1>
-<h2 id="_3">补全相关组件：</h2>
+<h2 id="_2">安装步骤</h2>
+<h3 id="_3">补全相关组件：</h3>
 <pre><code class="language-bash">sudo apt-get install dirmngr sudo gcc
 </code></pre>
-<h2 id="apt">编辑apt的源文件</h2>
+<h3 id="apt">编辑apt的源文件</h3>
 <pre><code class="language-bash">vim /etc/apt/sources.list
 </code></pre>
 <p>添加以下源</p>
@@ -615,11 +744,11 @@
 <p>更新源</p>
 <pre><code class="language-bash">sudo apt-get update
 </code></pre>
-<h2 id="python36">安装python3.6</h2>
+<h3 id="python36">安装python3.6</h3>
 <pre><code class="language-bash">sudo apt-get -t bionic install python3.6 python3.6-dev python3-distutils python3-pip
 ln -s /usr/bin/python3.6 /usr/bin/python3
 </code></pre>
-<h2 id="pip36">安装pip3.6</h2>
+<h3 id="pip36">安装pip3.6</h3>
 <pre><code class="language-bash">wget https://bootstrap.pypa.io/get-pip.py
 python3 get-pip.py
 </code></pre>
