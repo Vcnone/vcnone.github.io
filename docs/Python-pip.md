@@ -1,4 +1,6 @@
-# 卸载旧版本
+# pip
+
+## 卸载旧版本
 
 如果有旧的python3.x版本，可以先卸载，但建议不要卸载，因为有很多依赖，替换版本号，执行以下命令:
 
@@ -6,15 +8,15 @@
 apt-get autoremove python3.5 python3.5-dev
 ```
 
-# 安装步骤
+## 安装步骤
 
-## 补全相关组件：
+### 补全相关组件：
 
 ```bash
 sudo apt-get install dirmngr sudo gcc
 ```
 
-## 编辑apt的源文件
+### 编辑apt的源文件
 
 ```bash
 vim /etc/apt/sources.list
@@ -44,14 +46,14 @@ echo 'APT::Default-Release "stable";' | sudo tee -a /etc/apt/apt.conf.d/00local
 sudo apt-get update
 ```
 
-## 安装python3.6
+### 安装python3.6
 
 ```bash
 sudo apt-get -t bionic install python3.6 python3.6-dev python3-distutils python3-pip
 ln -s /usr/bin/python3.6 /usr/bin/python3
 ```
 
-## 安装pip3.6
+### 安装pip3.6
 
 ```bash
 wget https://bootstrap.pypa.io/get-pip.py

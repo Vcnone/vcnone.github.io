@@ -1,6 +1,8 @@
-# 安装supervisor
+# Supervisor
 
-## pip方式
+## 安装supervisor
+
+### pip方式
 
 ```bash
 wget https://bootstrap.pypa.io/get-pip.py
@@ -9,13 +11,13 @@ rm -rf get-pip.py
 pip install supervisor
 ```
 
-## apt方式
+### apt方式
 
 ```bash
 apt-get install supervisor
 ```
 
-# 配置supervisor
+## 配置supervisor
 
 ```bash
 echo_supervisord_conf > /etc/supervisor/supervisord.conf(配置文件位置)
@@ -42,9 +44,9 @@ user = root
 EOF
 ```
 
-# 配置Supervisor开机启动
+## 开机启动
 
-## 配置systemctl
+### 配置systemctl
 
 进入`/lib/systemd/system`目录，并创建`supervisor.service`文件，该文件内容如下所示。
 
@@ -55,7 +57,6 @@ root@VC:/lib/systemd/system# whereis supervisorctl
 supervisorctl: *查到的地址*/supervisorctl
 # 创建文件
 root@VC:/lib/systemd/system# vim supervisor.service
-
 
 [Unit]
 Description=supervisor
@@ -74,7 +75,7 @@ RestartSec=42s
 WantedBy=multi-user.target
 ```
 
-## 设置开机启动
+### 刷新service
 
 ```bash
 root@VC:/lib/systemd/system# systemctl enable supervisor.service
@@ -82,13 +83,13 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/supervisor.serv
 root@VC:/lib/systemd/system# systemctl daemon-reload
 ```
 
-## 修改文件权限为766
+### 修改文件权限为766
 
 ```bash
 root@VC:/lib/systemd/system# chmod 766 supervisor.service
 ```
 
-## supervisorctl命令行下的命令：
+### supervisorctl常用命令：
 
 ```bash
 supervisorctl status  #查看supervisord监控的所有进程的状态

@@ -1,4 +1,6 @@
-# Syncthing Discovery Server
+# Syncthing
+
+## Syncthing Discovery Server
 
 下载 stdiscosrv 包
 
@@ -12,7 +14,7 @@ wget https://github.com/syncthing/discosrv/releases/download/*version*/stdiscosr
 tar -xzvf stdiscosrv-linux-amd64-*version*.tar.gz
 ```
 
-# Syncthing Relay Server
+## Syncthing Relay Server
 
 下载strelaysrv
 
@@ -44,6 +46,8 @@ useradd relaysrv -s /bin/false
 mkdir /etc/relaysrv
 chown relaysrv /etc/relaysrv
 ```
+
+## 配置Supervisor
 
 在`/etc/supervisord.conf`文档最后加上下面这段设置
 

@@ -5,20 +5,30 @@ site_url: 'https://wiki.vcnone.top/'
 
 nav:
 - Index: index.md
-- Hexo: 
-    - Local: Hexo-Local.md
-    - GithubPage: Hexo-GithubPage.md
-- Sever:
-    - LNMP: LNMP搭建.md
-    - Supervisor: Supervisor.md
-    - Syncthing: Syncthing.md
-    - Python:
-      - pip: Python-pip.md
+- 开发工具:
+  - Git: 
+      - Local: Git-Local.md
+      - Server: Git-Server.md
+  - NVM-Windows: NVM-Windows.md
+- 网站博客:
+  - Hexo:
+      - Local: Hexo-Local.md
+      - GithubPage: Hexo-GithubPage.md
+  - LNMP:
+    - Install: LNMP搭建.md
+    - nginx: nginx反向代理GIthubPage.md
+  - Supervisor: Supervisor.md
+  - Syncthing: Syncthing.md
+  - Python:
+    - pip: Python-pip.md
 - About: about.md
 
 theme:
   name: material
 
+plugins:
+  - search:
+      separator: '[\s\u200b\-]'
 
 
 
