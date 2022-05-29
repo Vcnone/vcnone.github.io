@@ -1,13 +1,3 @@
----
-title: nginx反向代理GithubPage
-date: 2021-06-15 19:26:44
-cover: https://www.nginx.com/wp-content/uploads/2021/02/WB-NGINX-NXM583-FundamentalsOfMicsroservices-r2-featured-500x300@2x-395x237.png
-tags:
-- [博客]
-categories:
-- [建站]
----
-
 # DNS重定向
 
 配置DNS重定向到目标服务器。

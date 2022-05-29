@@ -1,13 +1,3 @@
----
-title: Python-pip
-date: 2021-05-01 18:00:03
-cover: https://pypi.org/static/images/logo-large.6bdbb439.svg
-tags:
-- [工具]
-categories:
-- [建站]
----
-
 # 卸载旧版本
 
 如果有旧的python3.x版本，可以先卸载，但建议不要卸载，因为有很多依赖，替换版本号，执行以下命令:

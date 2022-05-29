@@ -1,13 +1,3 @@
----
-title: NVM-Windows
-date: 2022-05-17 20:45:35
-cover: /img/nvm.jpg
-tags:
-- [工具]
-categories:
-- [软件]
----
-
 # nvm是什么
 
 **nvm**全英文也叫**node.js version management**，是一个**nodejs**的版本管理工具。**nvm**和**n**都是**node.js**版本管理工具，为了解决**node.js**各种版本存在不兼容现象可以通过它可以安装和切换不同版本的**node.js**。

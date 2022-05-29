@@ -1,13 +1,3 @@
----
-title: Syncthing
-date: 2021-05-01 17:54:43
-cover: https://docs.syncthing.net/_images/gs1.png
-tags:
-- [工具]
-categories:
-- [建站]
----
-
 # Syncthing Discovery Server
 
 下载 stdiscosrv 包

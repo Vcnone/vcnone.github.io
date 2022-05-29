@@ -1,13 +1,3 @@
----
-title: Supervisor
-date: 2021-05-01 17:53:16
-cover: /img/Supervisord.jpg
-tags:
-- [服务部署]
-categories:
-- [建站]
----
-
 # 安装supervisor
 
 ## pip方式

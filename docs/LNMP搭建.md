@@ -10,7 +10,7 @@
 - [**PHP-7.4.29**](https://www.php.net/distributions/php-7.4.29.tar.gz)
 - [**MariaDB-10.3**](https://dlm.mariadb.com/2145683/MariaDB/mariadb-10.7.3/repo/ubuntu/mariadb-10.7.3-ubuntu-focal-amd64-debs.tar)
 
-# 二、 安装过程
+# 二、安装过程
 
 按照MariaDB > Nginx > PHP的顺序安装。
 
@@ -135,6 +135,7 @@ apt-get install php7.4 php7.4-fpm
 需要PHP的网页启用
 
 1. 在`server{}`内，找到`index`开头的配置行，在该行中添加`index.php`。
+
 2. 在`server{}`内，找到`location ~ \.php$ {}`，启用以下行
    
    ```bash
@@ -143,5 +144,3 @@ apt-get install php7.4 php7.4-fpm
         fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
    }
    ```
-   
-   

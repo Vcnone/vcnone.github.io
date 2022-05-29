@@ -1,16 +1,13 @@
 site_name: Vcnone's Wiki
 site_author: 'VC'
 site_description: '恒以致远'
-site_url: 'https://www.xncoding.com/'
+site_url: 'https://wiki.vcnone.top/'
 
 nav:
 - Index: index.md
-- GithubPage: 
-    - Hexo: 
-        - Install: GithubPage.md
-        - Nginx: nginx反向代理GIthubPage.md
-    - ECS:
-        - Deploy: Hexo-deploy.md
+- Hexo: 
+    - Local: Hexo-Local.md
+    - GithubPage: Hexo-GithubPage.md
 - Sever:
     - LNMP: LNMP搭建.md
     - Supervisor: Supervisor.md
@@ -21,3 +18,9 @@ nav:
 
 theme:
   name: material
+
+
+
+
+
+
