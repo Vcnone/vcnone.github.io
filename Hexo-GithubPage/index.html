@@ -12,14 +12,14 @@
         <meta name="author" content="VC">
       
       
-        <link rel="canonical" href="https://wiki.vcnone.top/Hexo-deploy/">
+        <link rel="canonical" href="https://wiki.vcnone.top/Hexo-GithubPage/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
     
     
       
-        <title>Deploy - Vcnone's Wiki</title>
+        <title>GithubPage - Vcnone's Wiki</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#github-page" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Deploy
+              GithubPage
             
           </span>
         </div>
@@ -210,39 +210,13 @@
       
       
         <label class="md-nav__link" for="__nav_2">
-          GithubPage
+          Hexo
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="GithubPage" data-md-level="1">
+      <nav class="md-nav" aria-label="Hexo" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          GithubPage
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_1">
-          Hexo
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Hexo" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_1">
-          <span class="md-nav__icon md-icon"></span>
           Hexo
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
@@ -253,62 +227,13 @@
   
   
     <li class="md-nav__item">
-      <a href="../GithubPage/" class="md-nav__link">
-        Install
+      <a href="../Hexo-Local/" class="md-nav__link">
+        Local
       </a>
     </li>
   
 
             
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86GIthubPage/" class="md-nav__link">
-        Nginx
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2_2">
-          ECS
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="ECS" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_2">
-          <span class="md-nav__icon md-icon"></span>
-          ECS
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
           
             
               
@@ -326,12 +251,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Deploy
+          GithubPage
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Deploy
+        GithubPage
       </a>
       
         
@@ -350,15 +275,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#github-page" class="md-nav__link">
-    GitHub Page
+  <a href="#github" class="md-nav__link">
+    创建Github仓库
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    服务器
+  <a href="#ssh" class="md-nav__link">
+    配置ssh密钥
+  </a>
+  
+    <nav class="md-nav" aria-label="配置ssh密钥">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh_1" class="md-nav__link">
+    生成ssh密钥
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh_2" class="md-nav__link">
+    上传ssh密钥
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    自定义域名
   </a>
   
 </li>
@@ -367,13 +319,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -550,15 +495,42 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#github-page" class="md-nav__link">
-    GitHub Page
+  <a href="#github" class="md-nav__link">
+    创建Github仓库
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    服务器
+  <a href="#ssh" class="md-nav__link">
+    配置ssh密钥
+  </a>
+  
+    <nav class="md-nav" aria-label="配置ssh密钥">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ssh_1" class="md-nav__link">
+    生成ssh密钥
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssh_2" class="md-nav__link">
+    上传ssh密钥
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    自定义域名
   </a>
   
 </li>
@@ -577,57 +549,33 @@
                 
 
 
-<h1 id="_1">准备</h1>
-<p>核心是在原本Github Page推送的基础上，增加一条推送向云服务器的<code>deploy</code>，适用于增加更多部署。</p>
-<h2 id="github-page">GitHub Page</h2>
-<p>本地已经配安装置好git、hexo，见{% post_link GithubPage ‘此处’ %}</p>
-<h2 id="_2">服务器</h2>
-<p>已搭建好LNMP框架下的网页目录，见{% post_link LNMP搭建 此处 %}</p>
-<h1 id="_3">搭建</h1>
-<h2 id="git">本地git</h2>
-<pre><code>ssh-keygen -t rsa
+<h1 id="github-page">Github Page</h1>
+<h2 id="github">创建Github仓库</h2>
+<p>登录到<a href="https://github.com/">GitHub</a>，创建新仓库，仓库名应该为：<strong>用户名</strong>.github.io</p>
+<p><strong>用户名</strong>为GitHub帐号名，这是固定写法。</p>
+<h2 id="ssh">配置ssh密钥</h2>
+<h3 id="ssh_1">生成ssh密钥</h3>
+<p>如已有ssh密钥文件，跳过</p>
+<pre><code class="language-bash">ssh-keygen -t rsa -C &quot;GitHub注册邮箱&quot;
 </code></pre>
-<p>密钥默认位置：C盘用户文件夹下<code>.ssh</code>中，如已有则不需要生成。</p>
-<h2 id="git_1">服务器git</h2>
-<h3 id="git_2">安装git</h3>
-<pre><code class="language-bash">apt-get install git
+<h3 id="ssh_2">上传ssh密钥</h3>
+<p>打开<a href="https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key；或打开仓库的Deploy keys页面，新建new deploy key；</p>
+<p>其中Title为标题，Key填id_rsa.pub中内容</p>
+<p>在Git Bash中检测GitHub公钥设置是否成功，输入 <code>ssh git@github.com</code> ：</p>
+<pre><code class="language-bash">PTY allocation request failed on channel 0
+Hi *******! You've successfully authenticated, but GitHub does not provide shell access.
+Connection to github.com closed.
 </code></pre>
-<h3 id="gitssh">创建git用户及ssh设置</h3>
-<pre><code class="language-bash">sudo adduser git
-su git
-cd ~
-mkdir .ssh &amp;&amp; chmod 700 .ssh
-</code></pre>
-<pre><code>touch .ssh/authorized_keys &amp;&amp; chmod 600 .ssh/authorized_keys
-</code></pre>
-<p>在<code>authorized_keys</code>中写入本地生成的公钥</p>
-<h3 id="git_3">git仓库</h3>
-<p>将<code>home</code>中的git用户文件夹作为仓库目录</p>
-<pre><code class="language-bash">git init --bare hexoBlog.git
-</code></pre>
-<p>在 <code>/home/git/hexoBlog.git</code> 下，有一个自动生成的 <code>hooks</code> 文件夹。我们需要在里边新建一个新的钩子文件 <code>post-receive</code>。<strong>记得赋予执行权限。</strong></p>
-<pre><code class="language-bash">vim /home/git/hexoBlog.git/hooks/post-receive
-</code></pre>
-<p>在该文件中添加两行代码</p>
-<pre><code class="language-bash">#!/bin/bash
-git --work-tree=/var/www --git-dir=/home/git/hexoBlog.git checkout -f
-#--work-tree是网页目录，--git-dir是git仓库目录
-</code></pre>
-<h2 id="nginx">Nginx托管目录</h2>
-<p>假设在<code>/var/www</code>，需要更改目录权限</p>
-<pre><code class="language-bash">chown -R $USER:$USER /var/www
-</code></pre>
-<h2 id="hexo">Hexo</h2>
-<p>本地的 Hexo 博客所在文件，修改站点配置文件，增加一条推送向云服务器的<code>deploy</code>。</p>
-<pre><code class="language-bash">deploy:
-    repo:
-    #增加一行
-        hexo: git@ip:/home/git/hexoBlog.git,master
-        #这里的@前的git是云服务器的git用户，也可以是root什么的，与云端对应
-</code></pre>
-<blockquote>
-<p><strong>参考</strong>：<a href="https://www.jianshu.com/p/70bf58c48010" title="HEXO 部署到云服务器详细指南">HEXO部署到云服务器详细指南</a>，<a href="https://www.jianshu.com/p/271449df801f" title="Hexo教程：Hexo博客部署到腾讯云教程">Hexo教程：Hexo 博客部署到腾讯云教程</a></p>
-</blockquote>
+<p>如上则说明成功。</p>
+<h2 id="_1">自定义域名</h2>
+<p>在DNS服务商添加一条CNAME解析</p>
+<ol>
+<li>主机记录：自定义域名</li>
+<li>记录值：<strong>用户名</strong>.github.io</li>
+<li>其余默认即可</li>
+</ol>
+<p>本地博客文件夹 ，在blog/source目录下，创建一个CNAME文件，输入自定义域名。
+注意：<strong>CNAME文件不是txt文件</strong>。如果域名带有www，那么访问的时候必须带有www完整的域名才可以访问，但如果不带有www，以后访问的时候带不带www都可以访问。</p>
 
               
             </article>
@@ -641,7 +589,7 @@ git --work-tree=/var/www --git-dir=/home/git/hexoBlog.git checkout -f
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86GIthubPage/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Nginx" rel="prev">
+        <a href="../Hexo-Local/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Local" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -650,7 +598,7 @@ git --work-tree=/var/www --git-dir=/home/git/hexoBlog.git checkout -f
               <span class="md-footer__direction">
                 Previous
               </span>
-              Nginx
+              Local
             </div>
           </div>
         </a>

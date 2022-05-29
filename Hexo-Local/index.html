@@ -12,14 +12,14 @@
         <meta name="author" content="VC">
       
       
-        <link rel="canonical" href="https://wiki.vcnone.top/Supervisor/">
+        <link rel="canonical" href="https://wiki.vcnone.top/Hexo-Local/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.15">
     
     
       
-        <title>Supervisor - Vcnone's Wiki</title>
+        <title>Local - Vcnone's Wiki</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#supervisor" class="md-skip">
+        <a href="#hexo" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Supervisor
+              Local
             
           </span>
         </div>
@@ -197,12 +197,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -223,11 +225,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Hexo-Local/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Local
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Local
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    安装
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    推送网站
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hexo_1" class="md-nav__link">
+    常用的Hexo 命令
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -259,14 +316,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
       
@@ -301,59 +356,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Supervisor
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Supervisor/" class="md-nav__link">
         Supervisor
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pip" class="md-nav__link">
-    pip方式
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apt" class="md-nav__link">
-    apt方式
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -468,15 +475,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pip" class="md-nav__link">
-    pip方式
+  <a href="#_1" class="md-nav__link">
+    安装
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#apt" class="md-nav__link">
-    apt方式
+  <a href="#_2" class="md-nav__link">
+    推送网站
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hexo_1" class="md-nav__link">
+    常用的Hexo 命令
   </a>
   
 </li>
@@ -495,88 +509,52 @@
                 
 
 
-<h1 id="supervisor">安装supervisor</h1>
-<h2 id="pip">pip方式</h2>
-<pre><code class="language-bash">wget https://bootstrap.pypa.io/get-pip.py
-python get-pip.py
-rm -rf get-pip.py
-pip install supervisor
+<h1 id="hexo"><a href="https://hexo.io/zh-cn/">Hexo</a></h1>
+<h2 id="_1">安装</h2>
+<p>使用npm命令安装Hexo：</p>
+<pre><code class="language-bash">npm install hexo-cli -g
 </code></pre>
-<h2 id="apt">apt方式</h2>
-<pre><code class="language-bash">apt-get install supervisor
+<p>安装完成后，在上一级目录<code>D:\&gt;</code>初始化博客，可以命名为blog，Hexo框架与以后发布的网页都在这个文件夹中。</p>
+<pre><code class="language-bash">hexo init blog
 </code></pre>
-<h1 id="supervisor_1">配置supervisor</h1>
-<pre><code class="language-bash">echo_supervisord_conf &gt; /etc/supervisor/supervisord.conf(配置文件位置)
-echo &quot;supervisord&quot; &gt;&gt; /etc/rc.local
-cat &gt;&gt;/etc/supervisord.conf&lt;&lt;'EOF'
-
-[program:relaysrv]
-command=relaysrv -keys /etc/relaysrv -pools=&quot;&quot;
-autostart=true
-autorestart=true
-startsecs=10
-stdout_logfile=/var/log/relaysrv.log
-stdout_logfile_maxbytes=1MB
-stdout_logfile_backups=10
-stdout_capture_maxbytes=1MB
-redirect_stderr=true
-user = root
-
-#program后面跟服务的名称
-#command是程序的执行路径
-#autorstart是表示应用程序随supervisor的启动而启动
-#stdout_logfile是捕获标准输出。
-
-EOF
+<p>生成并预览博客</p>
+<pre><code class="language-bash">hexo g
+hexo s
 </code></pre>
-<h1 id="supervisor_2">配置Supervisor开机启动</h1>
-<h2 id="systemctl">配置systemctl</h2>
-<p>进入<code>/lib/systemd/system</code>目录，并创建<code>supervisor.service</code>文件，该文件内容如下所示。</p>
-<pre><code class="language-bash">root@VC:/lib/systemd/system#whereis supervisord
-supervisord: *查到的地址*/supervisord
-root@VC:/lib/systemd/system# whereis supervisorctl
-supervisorctl: *查到的地址*/supervisorctl
-# 创建文件
-root@VC:/lib/systemd/system# vim supervisor.service
-
-
-[Unit]
-Description=supervisor
-After=network.target
-
-[Service]
-Type=forking
-ExecStart=*查到的地址*/supervisord -c *配置文件位置*/supervisord.conf
-ExecStop=*查到的地址*/supervisorctl $OPTIONS shutdown
-ExecReload=*查到的地址*/supervisorctl $OPTIONS reload
-KillMode=process
-Restart=on-failure
-RestartSec=42s
-
-[Install]
-WantedBy=multi-user.target
+<h2 id="_2">推送网站</h2>
+<ul>
+<li>blog根目录里的_config.yml文件，称为<strong>站点配置文件</strong></li>
+<li>根目录里的themes文件夹，里面也有个_config.yml文件，称为<strong>主题配置文件</strong></li>
+</ul>
+<p>将我们的Hexo与远程Git仓库关联起来，打开<strong>站点配置文件</strong>_config.yml，翻到最后修改</p>
+<pre><code class="language-yml">deploy:
+    type: git
+    repo: 仓库的完整路径
+    branch: master(分支名)
 </code></pre>
-<h2 id="_1">设置开机启动</h2>
-<pre><code class="language-bash">root@VC:/lib/systemd/system# systemctl enable supervisor.service
-Created symlink from /etc/systemd/system/multi-user.target.wants/supervisor.service to /lib/systemd/system/supervisor.service.
-root@VC:/lib/systemd/system# systemctl daemon-reload
+<p>安装Git部署插件，输入命令：</p>
+<pre><code class="language-bash">npm install hexo-deployer-git --save
 </code></pre>
-<h2 id="766">修改文件权限为766</h2>
-<pre><code class="language-bash">root@VC:/lib/systemd/system# chmod 766 supervisor.service
+<p>此时生成并部署博客</p>
+<pre><code class="language-bash">hexo clean
+hexo g -d
 </code></pre>
-<h2 id="supervisorctl">supervisorctl命令行下的命令：</h2>
-<pre><code class="language-bash">supervisorctl status  #查看supervisord监控的所有进程的状态
-supervisorctl celery status  #查看celery进程的状态
-supervisorctl stop xxx  #停止某一个进程(xxx)，xxx为[program:theprogramname]里配置的值
-supervisorctl start xxx  #启动某个进程
-supervisorctl restart xxx  #重启某个进程
-supervisorctl stop groupworker  #重启所有属于名为groupworker这个分组的进程
-supervisorctl stop all  #停止全部进程，注：start、(start,restart同理)restart、stop都不会载入最新的配置文件
-supervisorctl reload  #重启supervisor
-supervisorctl update  #根据最新的配置文件，启动新配置或有改动的进程，配置没有改动的进程不会受影响而重启。当配置文件修改后，要执行这条命令。
-#用stop停止掉的进程，即使配置文件设置了autorestart=true，用reload或者update都不会自动重启。
-supervisorctl shutdown  # 关闭supervisord,会同时关闭supervisord监控的所有进程
-</code></pre>
+<p>博客就被部署到：远程仓库
+<a href="./Hexo-deploy.md">可通过多deploy，实现多端同步部署</a></p>
+<h2 id="hexo_1">常用的Hexo 命令</h2>
+<p><code>npm install hexo -g</code> #安装Hexo
+<code>npm update hexo -g</code> #升级
+<code>hexo init</code> #初始化博客</p>
+<p>命令简写
+<code>hexo n "我的博客"</code> == <code>hexo new "我的博客"</code> #新建文章
+<code>hexo g</code> == <code>hexo generate</code> #生成
+<code>hexo s</code> == <code>hexo server</code> #启动服务预览
+<code>hexo d</code> == <code>hexo deploy</code> #部署</p>
+<p><code>hexo server</code> #Hexo会监视文件变动并自动更新，无须重启服务器
+<code>hexo server -s</code> #静态模式
+<code>hexo server -p 5000</code> #更改端口
+<code>hexo server -i 192.168.1.1</code> #自定义 IP
+<code>hexo clean</code> #清除缓存，若是网页正常情况下可以忽略这条命令</p>
 
               
             </article>
@@ -590,7 +568,7 @@ supervisorctl shutdown  # 关闭supervisord,会同时关闭supervisord监控的�
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../LNMP%E6%90%AD%E5%BB%BA/" class="md-footer__link md-footer__link--prev" aria-label="Previous: LNMP" rel="prev">
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Index" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -599,20 +577,20 @@ supervisorctl shutdown  # 关闭supervisord,会同时关闭supervisord监控的�
               <span class="md-footer__direction">
                 Previous
               </span>
-              LNMP
+              Index
             </div>
           </div>
         </a>
       
       
         
-        <a href="../Syncthing/" class="md-footer__link md-footer__link--next" aria-label="Next: Syncthing" rel="next">
+        <a href="../Hexo-GithubPage/" class="md-footer__link md-footer__link--next" aria-label="Next: GithubPage" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Syncthing
+              GithubPage
             </div>
           </div>
           <div class="md-footer__button md-icon">
