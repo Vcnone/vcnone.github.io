@@ -1,8 +1,10 @@
-# DNS重定向
+# NGINX配置
 
 配置DNS重定向到目标服务器。
 
-## nginx
+## nginx反代GithubPage
+
+> **参考**：[血衫非弧](https://blog.kelu.org/tech/2017/05/06/github-pages-reverse-proxy.html)
 
 ```txt
 server {
@@ -41,5 +43,3 @@ proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for 把请求来源的IP
 
 X-Forwarded-For:简称XFF头，它代表客户端，也就是HTTP的请求端真实的IP，只有在通过了HTTP代理或者负载均衡服务器时才会添加该项。 它不是RFC中定义的标准请求头信息，在squid缓存代理服务器开发文档中可以找到该项的详细介绍。 标准格式如下：X-Forwarded-For: client1, proxy1, proxy2。
 ```
-
-> **参考**：[血衫非弧](https://blog.kelu.org/tech/2017/05/06/github-pages-reverse-proxy.html)

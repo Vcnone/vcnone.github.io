@@ -4,24 +4,25 @@ site_description: '恒以致远'
 site_url: 'https://wiki.vcnone.top/'
 
 nav:
-- Index: index.md
+- 主页: index.md
 - 开发工具:
   - Git: 
       - Local: Git-Local.md
       - Server: Git-Server.md
   - NVM-Windows: NVM-Windows.md
+  - Python:
+    - Install: Python-Install.md
+    - pip: Python-pip.md
 - 网站博客:
-  - Hexo:
-      - Local: Hexo-Local.md
-      - GithubPage: Hexo-GithubPage.md
   - LNMP:
-    - Install: LNMP搭建.md
-    - nginx: nginx反向代理GIthubPage.md
+    - Install: LNMP-Install.md
+    - nginx: Nginx-Config.md
+  - Hexo:
+    - Local: Hexo-Local.md
+    - GithubPage: Hexo-GithubPage.md
   - Supervisor: Supervisor.md
   - Syncthing: Syncthing.md
-  - Python:
-    - pip: Python-pip.md
-- About: about.md
+- 关于我: about.md
 
 theme:
   name: material

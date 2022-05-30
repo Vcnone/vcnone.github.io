@@ -5,9 +5,6 @@
 ### pip方式
 
 ```bash
-wget https://bootstrap.pypa.io/get-pip.py
-python get-pip.py
-rm -rf get-pip.py
 pip install supervisor
 ```
 
@@ -22,33 +19,19 @@ apt-get install supervisor
 ```bash
 echo_supervisord_conf > /etc/supervisor/supervisord.conf(配置文件位置)
 echo "supervisord" >> /etc/rc.local
-cat >>/etc/supervisord.conf<<'EOF'
+```
 
-[program:relaysrv]
-command=relaysrv -keys /etc/relaysrv -pools=""
-autostart=true
-autorestart=true
-startsecs=10
-stdout_logfile=/var/log/relaysrv.log
-stdout_logfile_maxbytes=1MB
-stdout_logfile_backups=10
-stdout_capture_maxbytes=1MB
-redirect_stderr=true
-user = root
+在 `/etc/supervisor/supervisord.conf` 文档最后加上下面这段设置，服务配置放置在单独的文件中。
 
-#program后面跟服务的名称
-#command是程序的执行路径
-#autorstart是表示应用程序随supervisor的启动而启动
-#stdout_logfile是捕获标准输出。
-
-EOF
+```bash
+[include]files = /etc/supervisor/conf.d/*.ini
 ```
 
 ## 开机启动
 
 ### 配置systemctl
 
-进入`/lib/systemd/system`目录，并创建`supervisor.service`文件，该文件内容如下所示。
+进入 `/lib/systemd/system` 目录，并创建 `supervisor.service` 文件，该文件内容如下所示。
 
 ```bash
 root@VC:/lib/systemd/system#whereis supervisord
@@ -103,4 +86,39 @@ supervisorctl reload  #重启supervisor
 supervisorctl update  #根据最新的配置文件，启动新配置或有改动的进程，配置没有改动的进程不会受影响而重启。当配置文件修改后，要执行这条命令。
 #用stop停止掉的进程，即使配置文件设置了autorestart=true，用reload或者update都不会自动重启。
 supervisorctl shutdown  # 关闭supervisord,会同时关闭supervisord监控的所有进程
+```
+
+## 配置
+
+
+### Syncthing Discovery Server
+
+```bash
+[program:relaysrv]
+command=relaysrv -keys /etc/relaysrv -pools=""
+autostart=true
+autorestart=true
+startsecs=10
+stdout_logfile=/var/log/relaysrv.log
+stdout_logfile_maxbytes=1MB
+stdout_logfile_backups=10
+stdout_capture_maxbytes=1MB
+redirect_stderr=true
+user = root
+```
+
+### Syncthing Relay Server
+
+```bash
+[program:discosrv]
+command=discosrv /etc/discosrv
+user = root
+autostart=true
+autorestart=true
+redirect_stderr=true
+startsecs=10
+stdout_logfile=/var/log/discosrv.log
+stdout_logfile_maxbytes=1MB
+stdout_logfile_backups=2
+stdout_capture_maxbytes=1MB
 ```

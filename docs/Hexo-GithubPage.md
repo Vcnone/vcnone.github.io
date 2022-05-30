@@ -2,9 +2,7 @@
 
 ## 创建Github仓库
 
-登录到[GitHub](https://github.com/)，创建新仓库，仓库名应该为：**用户名**.github.io
-
-**用户名**为GitHub帐号名，这是固定写法。
+登录到[GitHub](https://github.com/)，创建新仓库，仓库名应该为：**用户名**.github.io。**用户名**为GitHub帐号名，这是固定写法。
 
 ## 配置ssh密钥
 
@@ -18,7 +16,9 @@ ssh-keygen -t rsa -C "GitHub注册邮箱"
 
 ### 上传ssh密钥
 
-打开[GitHub_Settings_keys](https://github.com/settings/keys) 页面，新建new SSH Key；或打开仓库的Deploy keys页面，新建new deploy key；
+打开[GitHub_Settings_keys](https://github.com/settings/keys) 页面，新建new SSH Key；
+
+或打开仓库的Deploy keys页面，新建new deploy key；
 
 其中Title为标题，Key填id_rsa.pub中内容
 
@@ -40,5 +40,5 @@ Connection to github.com closed.
 2. 记录值：**用户名**.github.io
 3. 其余默认即可
 
-本地博客文件夹 ，在blog/source目录下，创建一个CNAME文件，输入自定义域名。
-注意：**CNAME文件不是txt文件**。如果域名带有www，那么访问的时候必须带有www完整的域名才可以访问，但如果不带有www，以后访问的时候带不带www都可以访问。
+本地博客文件夹 ，在 `blog/source` 目录下，创建一个 `CNAME` 文件，输入自定义域名。
+注意：** `CNAME` 文件不是 `txt` 文件**。如果域名带有 `www` ，那么访问的时候必须带有 `www` 完整的域名才可以访问，但如果不带有 `www` ，以后访问的时候带不带 `www` 都可以访问。

@@ -6,7 +6,7 @@
 
 ## nvm下载
 
-在[github](https://github.com/coreybutler/nvm-windows/releases)上下载最新版本,本次下载安装的是windows版本。
+在Github上下载[windows版本](https://github.com/coreybutler/nvm-windows/releases)。
 
 ## nvm安装
 
@@ -16,7 +16,7 @@
 4. 确认安装即可
 5. 安装完确认
 
-打开CMD，输入命令 nvm ，安装成功则可以看到列出了各种命令，**nvm-windows 需要管理员权限**。
+打开CMD，输入命令nvm，安装成功则可以看到列出了各种命令，**nvm-windows 需要管理员权限**。
 
 ## nvm命令提示
 
@@ -37,9 +37,13 @@
 
 ## nvm常见问题
 
-如果下载node过慢，请更换国内镜像源, 在 nvm 的安装路径下，找到 settings.txt，设置node_mirro与npm_mirror为国内镜像地址。下载就飞快了~~
+如果下载node过慢，请更换国内镜像源, 在nvm的安装路径下，找到 settings.txt，设置node_mirro与npm_mirror为国内镜像地址。
 
+或在命令行中：
+
+```bash
 nvm node_mirror https://npmmirror.com/mirrors/node/
 nvm npm_mirror https://npm.taobao.org/mirrors/npm/
+```
 
 > 来源：[http://nvm.uihtm.com/](http://nvm.uihtm.com/)
