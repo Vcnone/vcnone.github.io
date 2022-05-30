@@ -185,7 +185,7 @@
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        Index
+        主页
       </a>
     </li>
   
@@ -326,6 +326,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../Python-Install/" class="md-nav__link">
+        Install
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../Python-pip/" class="md-nav__link">
         pip
       </a>
@@ -381,6 +395,67 @@
               
   
   
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          LNMP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="LNMP" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          LNMP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LNMP-Install/" class="md-nav__link">
+        Install
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Nginx-Config/" class="md-nav__link">
+        nginx
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -388,18 +463,18 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_3_1">
+        <label class="md-nav__link" for="__nav_3_2">
           Hexo
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Hexo" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_1">
+        <label class="md-nav__title" for="__nav_3_2">
           <span class="md-nav__icon md-icon"></span>
           Hexo
         </label>
@@ -520,67 +595,6 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_2">
-          LNMP
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="LNMP" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_2">
-          <span class="md-nav__icon md-icon"></span>
-          LNMP
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../LNMP-Install/" class="md-nav__link">
-        Install
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Nginx-Config/" class="md-nav__link">
-        nginx
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
       <a href="../Supervisor/" class="md-nav__link">
         Supervisor
@@ -619,7 +633,7 @@
   
     <li class="md-nav__item">
       <a href="../about/" class="md-nav__link">
-        About
+        关于我
       </a>
     </li>
   
@@ -708,15 +722,15 @@
 
 <h1 id="github-page">Github Page</h1>
 <h2 id="github">创建Github仓库</h2>
-<p>登录到<a href="https://github.com/">GitHub</a>，创建新仓库，仓库名应该为：<strong>用户名</strong>.github.io</p>
-<p><strong>用户名</strong>为GitHub帐号名，这是固定写法。</p>
+<p>登录到<a href="https://github.com/">GitHub</a>，创建新仓库，仓库名应该为：<strong>用户名</strong>.github.io。<strong>用户名</strong>为GitHub帐号名，这是固定写法。</p>
 <h2 id="ssh">配置ssh密钥</h2>
 <h3 id="ssh_1">生成ssh密钥</h3>
 <p>如已有ssh密钥文件，跳过</p>
 <pre><code class="language-bash">ssh-keygen -t rsa -C &quot;GitHub注册邮箱&quot;
 </code></pre>
 <h3 id="ssh_2">上传ssh密钥</h3>
-<p>打开<a href="https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key；或打开仓库的Deploy keys页面，新建new deploy key；</p>
+<p>打开<a href="https://github.com/settings/keys">GitHub_Settings_keys</a> 页面，新建new SSH Key；</p>
+<p>或打开仓库的Deploy keys页面，新建new deploy key；</p>
 <p>其中Title为标题，Key填id_rsa.pub中内容</p>
 <p>在Git Bash中检测GitHub公钥设置是否成功，输入 <code>ssh git@github.com</code> ：</p>
 <pre><code class="language-bash">PTY allocation request failed on channel 0
@@ -731,8 +745,8 @@ Connection to github.com closed.
 <li>记录值：<strong>用户名</strong>.github.io</li>
 <li>其余默认即可</li>
 </ol>
-<p>本地博客文件夹 ，在blog/source目录下，创建一个CNAME文件，输入自定义域名。
-注意：<strong>CNAME文件不是txt文件</strong>。如果域名带有www，那么访问的时候必须带有www完整的域名才可以访问，但如果不带有www，以后访问的时候带不带www都可以访问。</p>
+<p>本地博客文件夹 ，在 <code>blog/source</code> 目录下，创建一个 <code>CNAME</code> 文件，输入自定义域名。
+注意：<strong> <code>CNAME</code> 文件不是 <code>txt</code> 文件</strong>。如果域名带有 <code>www</code> ，那么访问的时候必须带有 <code>www</code> 完整的域名才可以访问，但如果不带有 <code>www</code> ，以后访问的时候带不带 <code>www</code> 都可以访问。</p>
 
               
             </article>
@@ -762,13 +776,13 @@ Connection to github.com closed.
       
       
         
-        <a href="../LNMP-Install/" class="md-footer__link md-footer__link--next" aria-label="Next: Install" rel="next">
+        <a href="../Supervisor/" class="md-footer__link md-footer__link--next" aria-label="Next: Supervisor" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Install
+              Supervisor
             </div>
           </div>
           <div class="md-footer__button md-icon">
