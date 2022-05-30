@@ -294,6 +294,53 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Python" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python-pip/" class="md-nav__link">
+        pip
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -423,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../LNMP%E6%90%AD%E5%BB%BA/" class="md-nav__link">
+      <a href="../LNMP-Install/" class="md-nav__link">
         Install
       </a>
     </li>
@@ -437,7 +484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86GIthubPage/" class="md-nav__link">
+      <a href="../Nginx-Config/" class="md-nav__link">
         nginx
       </a>
     </li>
@@ -520,8 +567,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#supervisor" class="md-nav__link">
-    配置Supervisor
+  <a href="#relaysrv" class="md-nav__link">
+    relaysrv 启动配置
   </a>
   
 </li>
@@ -530,53 +577,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_3_5">
-          Python
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Python" data-md-level="2">
-        <label class="md-nav__title" for="__nav_3_5">
-          <span class="md-nav__icon md-icon"></span>
-          Python
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Python-pip/" class="md-nav__link">
-        pip
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -644,8 +644,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#supervisor" class="md-nav__link">
-    配置Supervisor
+  <a href="#relaysrv" class="md-nav__link">
+    relaysrv 启动配置
   </a>
   
 </li>
@@ -664,68 +664,49 @@
                 
 
 
-<h1 id="syncthing">Syncthing</h1>
+<h1 id="syncthing"><a href="https://github.com/syncthing/">Syncthing</a></h1>
 <h2 id="syncthing-discovery-server">Syncthing Discovery Server</h2>
-<p>下载 stdiscosrv 包</p>
+<p>下载 <a href="https://github.com/syncthing/discosrv/releases">stdiscosrv</a></p>
 <pre><code class="language-bash">wget https://github.com/syncthing/discosrv/releases/download/*version*/stdiscosrv-linux-amd64-*version*.tar.gz
 </code></pre>
 <p>解压</p>
 <pre><code class="language-bash">tar -xzvf stdiscosrv-linux-amd64-*version*.tar.gz
 </code></pre>
 <h2 id="syncthing-relay-server">Syncthing Relay Server</h2>
-<p>下载strelaysrv</p>
+<p>下载 <a href="https://github.com/syncthing/relaysrv/">strelaysrv</a></p>
 <pre><code class="language-bash">wget https://github.com/syncthing/relaysrv/releases/download/*version*/strelaysrv-linux-amd64-*version*.tar.gz
 </code></pre>
 <p>解压</p>
 <pre><code class="language-bash">tar -xzvf strelaysrv-linux-amd64-*version*.tar.gz
 </code></pre>
-<p>放入<code>/usr/bin/relaysrv</code>方便直接运行(顺便改个名)</p>
+<p>放入 <code>/usr/bin/relaysrv</code> 方便直接运行(顺便改个名)</p>
 <pre><code class="language-bash">mv strelaysrv-linux-amd64-*version*/strelaysrv /usr/bin/relaysrv
 </code></pre>
 <p>清理安装包</p>
 <pre><code class="language-bash">rm -rf strelaysrv-linux-amd64-*version* strelaysrv-linux-amd64-*version*.tar.gz
 </code></pre>
+<p>创建存储配置用的目录并修改所有者</p>
 <pre><code class="language-bash">useradd relaysrv -s /bin/false
-#创建存储配置用的目录并修改所有者
 mkdir /etc/relaysrv
 chown relaysrv /etc/relaysrv
 </code></pre>
-<h2 id="supervisor">配置Supervisor</h2>
-<p>在<code>/etc/supervisord.conf</code>文档最后加上下面这段设置</p>
-<pre><code class="language-bash">[program:relaysrv]
-command=relaysrv -keys /etc/relaysrv -pools=&quot;&quot;
-autostart=true
-autorestart=true
-startsecs=10
-stdout_logfile=/var/log/relaysrv.log
-stdout_logfile_maxbytes=1MB
-stdout_logfile_backups=10
-stdout_capture_maxbytes=1MB
-redirect_stderr=true
-user = root
-
-[program:discosrv]
-command=discosrv /etc/discosrv
-user = root
-autostart=true
-autorestart=true
-redirect_stderr=true
-startsecs=10
-stdout_logfile=/var/log/discosrv.log
-stdout_logfile_maxbytes=1MB
-stdout_logfile_backups=2
-stdout_capture_maxbytes=1MB
-
-#program后面跟服务的名称
-#command是程序的执行路径
-#autorstart是表示应用程序随supervisor的启动而启动
-#stdout_logfile是捕获标准输出。
-</code></pre>
-<p>也可以选择加上</p>
-<pre><code class="language-bash">[include]files = /etc/supervisor/conf.d/*.ini（此地址文件中放置上段设置）
-</code></pre>
-<p>relaysrv启动配置</p>
-<pre><code class="language-bash">-debug 启用调试输出-ext-address=&lt;address&gt; 可选的外部地址(将被上报)，能够通过端口转发来监听高权限端口(0-1024)然后外部可以连接这个端口-global-rate=&lt;bytes/s&gt; 全局限速，单位 bytes/s-keys=&lt;dir&gt; 用于存储 cert.pem 和 key.pem 的目录，默认是 &quot;.&quot;(当前目录)-listen=&lt;listen addr&gt; 协议监听的地址，默认是 &quot;:22067&quot;-message-timeout=&lt;duration&gt; 等待消息到达的最大时间(默认 1m0s)-nat 使用UPnP/NAT-PMP来取得外部端口映射-nat-lease=&lt;duration&gt; NAT租赁时间，单位分钟(默认 60)-nat-renewal=&lt;duration&gt; NAT刷新频率，单位分钟(默认 30)-nat-timeout=&lt;duration&gt; NAT发现超时，单位秒(默认 10)-network-timeout=&lt;duration&gt; 客户端和中继之间网络操作的超时，如果在这个时间段内客户端和中继之间没有数据被接收到，那么连接将被终止。此外，如果在这段时间内任何被中继的客户端没有数据发送，这个会话也会被终止(默认 2m0s)-per-session-rate=&lt;bytes/s&gt; 每个会话的限速，单位 bytes/s-ping-interval=&lt;duration&gt; ping的发送间隔(默认 1m0s)-pools=&lt;pool addresses&gt; 中继服务器池的地址，使用逗号分隔多个(默认 &quot;http://relays.syncthing.net/endpoint&quot;)。留空(-pools=&quot;&quot;)来禁止公布这个服务器到池中，以便作为私有中继。-protocol=&lt;string&gt; 监听协议，&quot;tcp&quot;来监听IPv4和IPv6，&quot;tcp4&quot;来监听IPv4，&quot;tcp6&quot;来监听IPv6(默认 &quot;tcp&quot;)-provided-by=&lt;string&gt; 一个可选的描述字段来表示谁提供了这个中继(可以打打广告啥的)-status-srv=&lt;listen addr&gt; 提供状态服务的监听地址(默认 &quot;:22070&quot;)，用于中继服务器池页面来展示服务器状态(传输了多少数据，有多少客户端在线等等)，留空(-status-srv=&quot;&quot;)来禁用这个功能-pools=&quot;&quot;
+<h2 id="relaysrv">relaysrv 启动配置</h2>
+<pre><code class="language-bash">-debug 启用调试输出
+-ext-address=&lt;address&gt; 可选的外部地址(将被上报)，能够通过端口转发来监听高权限端口(0-1024)然后外部可以连接这个端口
+-global-rate=&lt;bytes/s&gt; 全局限速，单位 bytes/s-keys=&lt;dir&gt; 用于存储 cert.pem 和 key.pem 的目录，默认是 &quot;.&quot;(当前目录)
+-listen=&lt;listen addr&gt; 协议监听的地址，默认是 &quot;:22067&quot;
+-message-timeout=&lt;duration&gt; 等待消息到达的最大时间(默认 1m0s)
+-nat 使用UPnP/NAT-PMP来取得外部端口映射
+-nat-lease=&lt;duration&gt; NAT租赁时间，单位分钟(默认 60)
+-nat-renewal=&lt;duration&gt; NAT刷新频率，单位分钟(默认 30)
+-nat-timeout=&lt;duration&gt; NAT发现超时，单位秒(默认 10)
+-network-timeout=&lt;duration&gt; 客户端和中继之间网络操作的超时，如果在这个时间段内客户端和中继之间没有数据被接收到，那么连接将被终止。此外，如果在这段时间内任何被中继的客户端没有数据发送，这个会话也会被终止(默认 2m0s)
+-per-session-rate=&lt;bytes/s&gt; 每个会话的限速，单位 bytes/s-ping-interval=&lt;duration&gt; ping的发送间隔(默认 1m0s)
+-pools=&lt;pool addresses&gt; 中继服务器池的地址，使用逗号分隔多个(默认 &quot;http://relays.syncthing.net/endpoint&quot;)。留空(-pools=&quot;&quot;)来禁止公布这个服务器到池中，以便作为私有中继。
+-protocol=&lt;string&gt; 监听协议，&quot;tcp&quot;来监听IPv4和IPv6，&quot;tcp4&quot;来监听IPv4，&quot;tcp6&quot;来监听IPv6(默认 &quot;tcp&quot;)
+-provided-by=&lt;string&gt; 一个可选的描述字段来表示谁提供了这个中继(可以打打广告啥的)
+-status-srv=&lt;listen addr&gt; 提供状态服务的监听地址(默认 &quot;:22070&quot;)，用于中继服务器池页面来展示服务器状态(传输了多少数据，有多少客户端在线等等)，留空(-status-srv=&quot;&quot;)来禁用这个功能
+-pools=&quot;&quot;
 </code></pre>
 <p>带配置文件启动</p>
 <pre><code class="language-bash">supervisord -c /etc/supervisor/supervisor.conf
@@ -759,13 +740,13 @@ stdout_capture_maxbytes=1MB
       
       
         
-        <a href="../Python-pip/" class="md-footer__link md-footer__link--next" aria-label="Next: pip" rel="next">
+        <a href="../about/" class="md-footer__link md-footer__link--next" aria-label="Next: About" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              pip
+              About
             </div>
           </div>
           <div class="md-footer__button md-icon">

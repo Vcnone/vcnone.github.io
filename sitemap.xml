@@ -2,62 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://wiki.vcnone.top/</loc>
-         <lastmod>2022-05-29</lastmod>
+         <lastmod>2022-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.vcnone.top/Git-Local/</loc>
-         <lastmod>2022-05-29</lastmod>
+         <lastmod>2022-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.vcnone.top/Git-Server/</loc>
-         <lastmod>2022-05-29</lastmod>
+         <lastmod>2022-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.vcnone.top/Hexo-GithubPage/</loc>
-         <lastmod>2022-05-29</lastmod>
+         <lastmod>2022-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.vcnone.top/Hexo-Local/</loc>
-         <lastmod>2022-05-29</lastmod>
+         <lastmod>2022-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.vcnone.top/LNMP%E6%90%AD%E5%BB%BA/</loc>
-         <lastmod>2022-05-29</lastmod>
+         <loc>https://wiki.vcnone.top/LNMP-Install/</loc>
+         <lastmod>2022-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.vcnone.top/NVM-Windows/</loc>
-         <lastmod>2022-05-29</lastmod>
+         <lastmod>2022-05-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.vcnone.top/Nginx-Config/</loc>
+         <lastmod>2022-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.vcnone.top/Python-pip/</loc>
-         <lastmod>2022-05-29</lastmod>
+         <lastmod>2022-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.vcnone.top/Supervisor/</loc>
-         <lastmod>2022-05-29</lastmod>
+         <lastmod>2022-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.vcnone.top/Syncthing/</loc>
-         <lastmod>2022-05-29</lastmod>
+         <lastmod>2022-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://wiki.vcnone.top/about/</loc>
-         <lastmod>2022-05-29</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.vcnone.top/nginx%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86GIthubPage/</loc>
-         <lastmod>2022-05-29</lastmod>
+         <lastmod>2022-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
