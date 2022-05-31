@@ -7,21 +7,21 @@ nav:
 - 主页: index.md
 - 开发工具:
   - Git: 
-      - Local: Git-Local.md
-      - Server: Git-Server.md
-  - NVM-Windows: NVM-Windows.md
+      - Local: tools/Git-Local.md
+      - Server: tools/Git-Server.md
+  - NVM-Windows: tools/NVM-Windows.md
   - Python:
-    - Install: Python-Install.md
-    - pip: Python-pip.md
+    - Install: tools/Python-Install.md
+    - pip: tools/Python-pip.md
 - 网站博客:
   - LNMP:
-    - Install: LNMP-Install.md
-    - nginx: Nginx-Config.md
+    - Install: website/LNMP-Install.md
+    - nginx: website/Nginx-Config.md
   - Hexo:
-    - Local: Hexo-Local.md
-    - GithubPage: Hexo-GithubPage.md
-  - Supervisor: Supervisor.md
-  - Syncthing: Syncthing.md
+    - Local: website/Hexo-Local.md
+    - GithubPage: website/Hexo-GithubPage.md
+  - Supervisor: website/Supervisor.md
+  - Syncthing: website/Syncthing.md
 - 关于我: about.md
 
 theme:
