@@ -32,7 +32,7 @@ hexo s
 deploy:
     github: git@github.com:******/******.github.io.git,Hexo
     gitee: git@gitee.com:******/******.git,master
-    server: git@域名 or IP:/home/git/hexoBlog.git,master
+    server: git@[域名/IP]:/home/git/hexoBlog.git,master
     #格式：[部署名]: 用户名@仓库位置,分支名
     #这里的@前的git是云服务器的git用户，也可以是root什么的，与云端对应
 ```
@@ -74,10 +74,12 @@ hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令
 
 ## 更换主题
 
-更换不同的主题，主题传送门：
+主题传送门：
+
 [官方主题](https://hexo.io/themes/) or [Next](https://theme-next.org/) or [Butterfly](https://github.com/jerryc127/hexo-theme-butterfly)
 
-> **参考**：
-[RunDouble's Blog](http://wu.run/2018/12/20/hexo-from-github-2-aliyun/)
-[HEXO部署到云服务器详细指南](https://www.jianshu.com/p/70bf58c48010 "HEXO 部署到云服务器详细指南")
-[Hexo教程：Hexo 博客部署到腾讯云教程](https://www.jianshu.com/p/271449df801f "Hexo教程：Hexo博客部署到腾讯云教程")
+> [RunDouble's Blog](http://wu.run/2018/12/20/hexo-from-github-2-aliyun/)
+>
+> [HEXO部署到云服务器详细指南](https://www.jianshu.com/p/70bf58c48010 "HEXO 部署到云服务器详细指南")
+>
+> [Hexo教程：Hexo 博客部署到腾讯云教程](https://www.jianshu.com/p/271449df801f "Hexo教程：Hexo博客部署到腾讯云教程")
